@@ -35,9 +35,7 @@ const Hero = () => {
               4.9
             </span>
           </div>
-          <p className="text-xs text-luxury-dark-600">
-            500+ довольных клиентов
-          </p>
+          <p className="text-xs text-luxury-dark-600">500+ happy customers</p>
         </motion.div>
       </div>
 
@@ -56,7 +54,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Award className="w-4 h-4" />
-            <span>Лицензированная компания с 2018 года</span>
+            <span>Licensed company since 2018</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -66,10 +64,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Аренда
+            Luxury Car
             <br />
             <span className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 bg-clip-text text-transparent">
-              Люкс Автомобилей
+              Rental
             </span>
           </motion.h1>
 
@@ -80,8 +78,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Эксклюзивные автомобили премиум-класса для особенных моментов.
-            Полная страховка и техподдержка 24/7.
+            Exclusive premium vehicles for special moments. Full insurance and
+            24/7 technical support.
           </motion.p>
 
           {/* Trust Features */}
@@ -95,19 +93,19 @@ const Hero = () => {
               <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
                 <Users className="w-4 h-4 text-white" />
               </div>
-              <span>500+ клиентов</span>
+              <span>500+ customers</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-200">
               <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
                 <Award className="w-4 h-4 text-white" />
               </div>
-              <span>6 лет опыта</span>
+              <span>6 years experience</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-200">
               <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
                 <Star className="w-4 h-4 text-white" />
               </div>
-              <span>Рейтинг 4.9</span>
+              <span>4.9 rating</span>
             </div>
           </motion.div>
 
@@ -123,14 +121,14 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Посмотреть автомобили
+              View Cars
             </motion.button>
             <motion.button
               className="text-white px-8 py-4 rounded-full text-lg font-semibold hover:text-luxury-gold-400 transition-colors duration-300 border-2 border-white/30 hover:border-luxury-gold-400"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Св��заться с нами
+              Contact Us
             </motion.button>
           </motion.div>
 
@@ -142,11 +140,11 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1 }}
           >
             <p className="text-sm">
-              От{" "}
+              Starting from{" "}
               <span className="text-luxury-gold-400 font-bold text-lg">
-                15,000₽
+                $200
               </span>{" "}
-              за день
+              per day
             </p>
           </motion.div>
         </motion.div>
@@ -163,7 +161,7 @@ const Hero = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center"
           >
-            <span className="text-gray-300 text-sm mb-2">Узнать больше</span>
+            <span className="text-gray-300 text-sm mb-2">Learn more</span>
             <ChevronDown className="w-6 h-6 text-luxury-gold-400" />
           </motion.div>
         </motion.div>

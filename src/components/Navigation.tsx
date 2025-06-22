@@ -15,10 +15,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Главная", href: "#home" },
-    { name: "��втомобили", href: "#cars" },
-    { name: "О нас", href: "#about" },
-    { name: "Контакты", href: "#contact" },
+    { name: "Home", href: "#home" },
+    { name: "Cars", href: "#cars" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -67,7 +67,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-luxury-dark-600">
               <Shield className="w-4 h-4 text-luxury-gold-600" />
-              <span className="text-sm font-medium">Проверенная компания</span>
+              <span className="text-sm font-medium">Trusted Company</span>
             </div>
             <motion.button
               className="bg-luxury-gold-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold-700 transition-colors duration-200 flex items-center space-x-2"
@@ -75,7 +75,7 @@ const Navigation = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Phone className="w-4 h-4" />
-              <span>+7 (495) 123-45-67</span>
+              <span>+1 (555) 123-4567</span>
             </motion.button>
           </div>
 
