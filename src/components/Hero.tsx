@@ -1,16 +1,44 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Star, Award, Users } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-dyson-grey-50 to-dyson-purple-50"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-dyson-purple-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-dyson-purple-300 rounded-full blur-2xl"></div>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg"
+          alt="Luxury Lamborghini"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="absolute top-24 right-6 z-20 hidden lg:block">
+        <motion.div
+          className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          <div className="flex items-center space-x-2 mb-2">
+            <div className="flex text-luxury-gold-500">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-current" />
+              ))}
+            </div>
+            <span className="text-sm font-semibold text-luxury-dark-800">
+              4.9
+            </span>
+          </div>
+          <p className="text-xs text-luxury-dark-600">
+            500+ довольных клиентов
+          </p>
+        </motion.div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -20,30 +48,68 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
+          {/* Trust Badge */}
+          <motion.div
+            className="inline-flex items-center space-x-2 bg-luxury-gold-100 text-luxury-gold-800 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Award className="w-4 h-4" />
+            <span>Лицензированная компания с 2018 года</span>
+          </motion.div>
+
           {/* Main Headline */}
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-dyson-grey-900 mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Dyson.
+            Аренда
             <br />
-            <span className="bg-gradient-to-r from-dyson-purple-600 to-dyson-purple-800 bg-clip-text text-transparent">
-              Engineering the Future.
+            <span className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 bg-clip-text text-transparent">
+              Люкс Автомобилей
             </span>
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl text-dyson-grey-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Pioneering technology that solves the problems others ignore. Our
-            engineering obsession creates products that work better.
+            Эксклюзивные автомобили премиум-класса для особенных моментов.
+            Полная страховка и техподдержка 24/7.
           </motion.p>
+
+          {/* Trust Features */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <div className="flex items-center space-x-2 text-gray-200">
+              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
+                <Users className="w-4 h-4 text-white" />
+              </div>
+              <span>500+ клиентов</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-200">
+              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
+                <Award className="w-4 h-4 text-white" />
+              </div>
+              <span>6 лет опыта</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-200">
+              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
+                <Star className="w-4 h-4 text-white" />
+              </div>
+              <span>Рейтинг 4.9</span>
+            </div>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -53,19 +119,35 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
-              className="bg-dyson-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-dyson-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-luxury-gold-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-luxury-gold-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore Products
+              Посмотреть автомобили
             </motion.button>
             <motion.button
-              className="text-dyson-grey-700 px-8 py-4 rounded-full text-lg font-semibold hover:text-dyson-purple-600 transition-colors duration-300 border-2 border-dyson-grey-300 hover:border-dyson-purple-600"
+              className="text-white px-8 py-4 rounded-full text-lg font-semibold hover:text-luxury-gold-400 transition-colors duration-300 border-2 border-white/30 hover:border-luxury-gold-400"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Watch Innovation
+              Св��заться с нами
             </motion.button>
+          </motion.div>
+
+          {/* Price Info */}
+          <motion.div
+            className="mt-8 text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <p className="text-sm">
+              От{" "}
+              <span className="text-luxury-gold-400 font-bold text-lg">
+                15,000₽
+              </span>{" "}
+              за день
+            </p>
           </motion.div>
         </motion.div>
 
@@ -81,23 +163,11 @@ const Hero = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center"
           >
-            <span className="text-dyson-grey-500 text-sm mb-2">
-              Scroll to discover
-            </span>
-            <ChevronDown className="w-6 h-6 text-dyson-purple-600" />
+            <span className="text-gray-300 text-sm mb-2">Узнать больше</span>
+            <ChevronDown className="w-6 h-6 text-luxury-gold-400" />
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Product Silhouette */}
-      <motion.div
-        className="absolute right-10 top-1/2 transform -translate-y-1/2 opacity-20 hidden lg:block"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 0.2, x: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <div className="w-64 h-96 bg-gradient-to-b from-dyson-purple-300 to-dyson-purple-600 rounded-full blur-xl"></div>
-      </motion.div>
     </section>
   );
 };

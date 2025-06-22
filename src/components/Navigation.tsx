@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Crown, Shield, Phone } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,16 +15,18 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
-    { name: "Technology", href: "#technology" },
-    { name: "Support", href: "#support" },
+    { name: "Главная", href: "#home" },
+    { name: "��втомобили", href: "#cars" },
+    { name: "О нас", href: "#about" },
+    { name: "Контакты", href: "#contact" },
   ];
 
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-lg shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-white/95 backdrop-blur-lg shadow-xl border-b border-luxury-gold-100"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -33,11 +36,16 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
-            className="text-2xl font-bold text-dyson-purple-600"
+            className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            DYSON
+            <div className="w-10 h-10 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-full flex items-center justify-center">
+              <Crown className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-800 bg-clip-text text-transparent">
+              LUXCAR
+            </span>
           </motion.div>
 
           {/* Navigation Links */}
@@ -46,7 +54,7 @@ const Navigation = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-dyson-grey-700 hover:text-dyson-purple-600 transition-colors duration-200 font-medium"
+                className="text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors duration-200 font-medium"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -55,9 +63,25 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Contact Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center space-x-2 text-luxury-dark-600">
+              <Shield className="w-4 h-4 text-luxury-gold-600" />
+              <span className="text-sm font-medium">Проверенная компания</span>
+            </div>
+            <motion.button
+              className="bg-luxury-gold-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold-700 transition-colors duration-200 flex items-center space-x-2"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Phone className="w-4 h-4" />
+              <span>+7 (495) 123-45-67</span>
+            </motion.button>
+          </div>
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-dyson-grey-700 hover:text-dyson-purple-600 transition-colors">
+            <button className="text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors">
               <svg
                 className="w-6 h-6"
                 fill="none"
