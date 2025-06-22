@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
-import ProductShowcase from "../components/ProductShowcase";
-import TechnologySection from "../components/TechnologySection";
-import Footer from "../components/Footer";
+import CarsShowcase from "../components/CarsShowcase";
 
 const Index = () => {
   useEffect(() => {
@@ -37,14 +35,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <Navigation />
       <main>
         <Hero />
-        <ProductShowcase />
-        <TechnologySection />
+        <CarsShowcase />
       </main>
-      <Footer />
     </div>
   );
 };

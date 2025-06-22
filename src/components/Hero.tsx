@@ -1,171 +1,215 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Star, Award, Users } from "lucide-react";
+import { Play, Shield, Clock, Star } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Background Image */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg"
           alt="Luxury Lamborghini"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-1/4 left-10 w-2 h-32 bg-luxury-gold-500 opacity-60"></div>
+        <div className="absolute bottom-1/4 right-10 w-1 h-24 bg-luxury-gold-400 opacity-40"></div>
       </div>
 
-      {/* Trust Indicators */}
-      <div className="absolute top-24 right-6 z-20 hidden lg:block">
+      {/* Trust Metrics - Top Right */}
+      <div className="absolute top-32 right-8 z-20 hidden lg:flex flex-col space-y-4">
         <motion.div
-          className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl"
+          className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <div className="flex items-center space-x-2 mb-1">
+            <Star className="w-5 h-5 text-luxury-gold-400 fill-current" />
+            <span className="text-white font-bold text-lg">4.9</span>
+          </div>
+          <p className="text-gray-300 text-sm">Customer Rating</p>
+        </motion.div>
+
+        <motion.div
+          className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <div className="flex items-center space-x-2 mb-2">
-            <div className="flex text-luxury-gold-500">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-current" />
-              ))}
-            </div>
-            <span className="text-sm font-semibold text-luxury-dark-800">
-              4.9
-            </span>
+          <div className="flex items-center space-x-2 mb-1">
+            <Shield className="w-5 h-5 text-luxury-gold-400" />
+            <span className="text-white font-bold text-lg">24/7</span>
           </div>
-          <p className="text-xs text-luxury-dark-600">500+ happy customers</p>
+          <p className="text-gray-300 text-sm">Support</p>
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Trust Badge */}
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div
-            className="inline-flex items-center space-x-2 bg-luxury-gold-100 text-luxury-gold-800 px-4 py-2 rounded-full text-sm font-semibold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-left"
           >
-            <Award className="w-4 h-4" />
-            <span>Licensed company since 2018</span>
-          </motion.div>
-
-          {/* Main Headline */}
-          <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Luxury Car
-            <br />
-            <span className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 bg-clip-text text-transparent">
-              Rental
-            </span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Exclusive premium vehicles for special moments. Full insurance and
-            24/7 technical support.
-          </motion.p>
-
-          {/* Trust Features */}
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            <div className="flex items-center space-x-2 text-gray-200">
-              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
-                <Users className="w-4 h-4 text-white" />
-              </div>
-              <span>500+ customers</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-200">
-              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
-                <Award className="w-4 h-4 text-white" />
-              </div>
-              <span>6 years experience</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-200">
-              <div className="w-8 h-8 bg-luxury-gold-600 rounded-full flex items-center justify-center">
-                <Star className="w-4 h-4 text-white" />
-              </div>
-              <span>4.9 rating</span>
-            </div>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <motion.button
-              className="bg-luxury-gold-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-luxury-gold-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
+            {/* Premium Badge */}
+            <motion.div
+              className="inline-flex items-center space-x-2 bg-luxury-gold-500/20 border border-luxury-gold-500/30 text-luxury-gold-400 px-4 py-2 rounded-full text-sm font-medium mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              View Cars
-            </motion.button>
-            <motion.button
-              className="text-white px-8 py-4 rounded-full text-lg font-semibold hover:text-luxury-gold-400 transition-colors duration-300 border-2 border-white/30 hover:border-luxury-gold-400"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
+              <div className="w-2 h-2 bg-luxury-gold-400 rounded-full animate-pulse"></div>
+              <span>Premium Fleet Available</span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Contact Us
-            </motion.button>
+              Drive
+              <br />
+              <span className="relative">
+                <span className="bg-gradient-to-r from-luxury-gold-400 via-luxury-gold-500 to-luxury-gold-600 bg-clip-text text-transparent">
+                  Excellence
+                </span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600"
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1, delay: 1.2 }}
+                />
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              className="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              Experience the world's most exclusive supercars. Delivered to your
+              doorstep with white-glove service.
+            </motion.p>
+
+            {/* Features */}
+            <motion.div
+              className="flex flex-wrap gap-6 mb-10"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Clock className="w-4 h-4 text-luxury-gold-400" />
+                <span className="text-sm">Instant Booking</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Shield className="w-4 h-4 text-luxury-gold-400" />
+                <span className="text-sm">Full Insurance</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Star className="w-4 h-4 text-luxury-gold-400" />
+                <span className="text-sm">VIP Service</span>
+              </div>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
+              <motion.button
+                className="group bg-luxury-gold-500 hover:bg-luxury-gold-600 text-black px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center space-x-2"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span>Browse Fleet</span>
+                <motion.div
+                  className="w-8 h-8 bg-black/10 rounded-full flex items-center justify-center"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Play className="w-4 h-4 ml-0.5" />
+                </motion.div>
+              </motion.button>
+
+              <motion.button
+                className="border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Call Now
+              </motion.button>
+            </motion.div>
+
+            {/* Price Display */}
+            <motion.div
+              className="mt-8 flex items-baseline space-x-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+            >
+              <span className="text-gray-400 text-sm">Starting from</span>
+              <span className="text-3xl font-bold text-luxury-gold-400">
+                $299
+              </span>
+              <span className="text-gray-400 text-sm">/day</span>
+            </motion.div>
           </motion.div>
 
-          {/* Price Info */}
+          {/* Right Content - Car Preview */}
           <motion.div
-            className="mt-8 text-gray-300"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
-            <p className="text-sm">
-              Starting from{" "}
-              <span className="text-luxury-gold-400 font-bold text-lg">
-                $200
-              </span>{" "}
-              per day
-            </p>
-          </motion.div>
-        </motion.div>
+            <div className="relative">
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold-500/20 to-luxury-gold-600/20 rounded-3xl blur-3xl"></div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center"
-          >
-            <span className="text-gray-300 text-sm mb-2">Learn more</span>
-            <ChevronDown className="w-6 h-6 text-luxury-gold-400" />
+              {/* Car Stats Card */}
+              <motion.div
+                className="absolute top-4 left-4 bg-white/10 backdrop-blur-xl rounded-xl p-4 border border-white/20 z-10"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                <div className="text-white text-sm">
+                  <div className="font-semibold">Lamborghini Huracán</div>
+                  <div className="text-gray-300">630 HP • 0-60 in 2.5s</div>
+                </div>
+              </motion.div>
+
+              {/* Price Tag */}
+              <motion.div
+                className="absolute bottom-4 right-4 bg-luxury-gold-500 text-black px-4 py-2 rounded-xl font-bold z-10"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+              >
+                $799/day
+              </motion.div>
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
+
+      {/* Bottom Gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   );
 };
