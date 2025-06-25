@@ -28,7 +28,6 @@ import {
   Twitter,
   Youtube,
   Play,
-  Download,
 } from "lucide-react";
 
 const Index = () => {
@@ -481,10 +480,6 @@ const Index = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <button className="hidden md:flex items-center space-x-2 text-gray-700 hover:text-yellow-600 transition-colors">
-              <Download className="w-4 h-4" />
-              <span className="text-sm font-medium">Download App</span>
-            </button>
             <motion.button
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
@@ -619,26 +614,6 @@ const Index = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-
-        {/* App Download Section */}
-        <div className="absolute bottom-8 left-8 hidden lg:block">
-          <motion.div
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <h3 className="text-white font-bold mb-3">Download Our App</h3>
-            <div className="flex space-x-3">
-              <div className="bg-black rounded-lg px-3 py-2 text-white text-xs font-medium cursor-pointer hover:bg-gray-800 transition-colors">
-                App Store
-              </div>
-              <div className="bg-black rounded-lg px-3 py-2 text-white text-xs font-medium cursor-pointer hover:bg-gray-800 transition-colors">
-                Google Play
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
