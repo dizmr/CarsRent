@@ -28,6 +28,7 @@ import {
   Twitter,
   Youtube,
   Play,
+
 } from "lucide-react";
 
 const Index = () => {
@@ -615,6 +616,8 @@ const Index = () => {
             </motion.div>
           </div>
         </div>
+
+
       </section>
 
       {/* Search Form */}
@@ -636,14 +639,20 @@ const Index = () => {
                   Pickup Location
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 pointer-events-none">
-                    <MapPin className="w-5 h-5 text-yellow-600" />
-                  </div>
                   <select
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium bg-white relative z-0"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium bg-white appearance-none"
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
                   >
+                    <option>Dubai Marina</option>
+                    <option>Downtown Dubai</option>
+                    <option>Dubai Airport</option>
+                    <option>Abu Dhabi</option>
+                    <option>Sharjah</option>
+                  </select>
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <MapPin className="w-5 h-5 text-yellow-600" />
+                  </div>
                     <option>Dubai Marina</option>
                     <option>Downtown Dubai</option>
                     <option>Dubai Airport</option>
