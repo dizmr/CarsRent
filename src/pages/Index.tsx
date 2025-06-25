@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -34,6 +33,7 @@ import {
 const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState("Dubai");
   const [favoriteCards, setFavoriteCards] = useState<number[]>([]);
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const toggleFavorite = (carId: number) => {
     setFavoriteCards((prev) =>
@@ -43,13 +43,20 @@ const Index = () => {
     );
   };
 
+  const categories = [
+    { id: "all", name: "All Cars", count: 24 },
+    { id: "supercar", name: "Supercars", count: 8 },
+    { id: "luxury", name: "Luxury", count: 10 },
+    { id: "exotic", name: "Exotic", count: 6 },
+  ];
+
   const cars = [
     {
       id: 1,
       name: "Rolls Royce Cullinan",
       brand: "Rolls Royce",
       image:
-        "https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg",
+        "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg",
       price: 2999,
       originalPrice: 3499,
       passengers: 4,
@@ -57,14 +64,13 @@ const Index = () => {
       doors: 4,
       baggage: 3,
       badge: "New Arrival",
-      isNew: true,
+      category: "luxury",
     },
     {
       id: 2,
       name: "Lamborghini Aventador",
       brand: "Lamborghini",
-      image:
-        "https://images.pexels.com/photos/18837778/pexels-photo-18837778.jpeg",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
       price: 1899,
       originalPrice: 2199,
       passengers: 2,
@@ -72,7 +78,7 @@ const Index = () => {
       doors: 2,
       baggage: 1,
       badge: "Most Popular",
-      isPopular: true,
+      category: "supercar",
     },
     {
       id: 3,
@@ -87,7 +93,7 @@ const Index = () => {
       doors: 4,
       baggage: 2,
       badge: "Limited",
-      isLimited: true,
+      category: "luxury",
     },
     {
       id: 4,
@@ -102,14 +108,14 @@ const Index = () => {
       doors: 5,
       baggage: 4,
       badge: "Premium",
-      isPremium: true,
+      category: "luxury",
     },
     {
       id: 5,
       name: "Ferrari 488 Spider",
       brand: "Ferrari",
       image:
-        "https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg",
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
       price: 2199,
       originalPrice: 2599,
       passengers: 2,
@@ -117,7 +123,7 @@ const Index = () => {
       doors: 2,
       baggage: 1,
       badge: "Exclusive",
-      isExclusive: true,
+      category: "supercar",
     },
     {
       id: 6,
@@ -132,9 +138,279 @@ const Index = () => {
       doors: 2,
       baggage: 2,
       badge: "Luxury",
-      isLuxury: true,
+      category: "luxury",
+    },
+    {
+      id: 7,
+      name: "McLaren 720S",
+      brand: "McLaren",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
+      price: 2899,
+      originalPrice: 3299,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Hot Deal",
+      category: "supercar",
+    },
+    {
+      id: 8,
+      name: "Audi R8 V10 Plus",
+      brand: "Audi",
+      image:
+        "https://images.pexels.com/photos/14487781/pexels-photo-14487781.jpeg",
+      price: 1499,
+      originalPrice: 1799,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Special",
+      category: "supercar",
+    },
+    {
+      id: 9,
+      name: "Porsche 911 Turbo S",
+      brand: "Porsche",
+      image:
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
+      price: 1199,
+      originalPrice: 1399,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Best Seller",
+      category: "supercar",
+    },
+    {
+      id: 10,
+      name: "Range Rover Vogue",
+      brand: "Range Rover",
+      image:
+        "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg",
+      price: 799,
+      originalPrice: 999,
+      passengers: 5,
+      transmission: "Auto",
+      doors: 5,
+      baggage: 4,
+      badge: "Family",
+      category: "luxury",
+    },
+    {
+      id: 11,
+      name: "Bugatti Veyron",
+      brand: "Bugatti",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
+      price: 4999,
+      originalPrice: 5999,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Ultra Rare",
+      category: "exotic",
+    },
+    {
+      id: 12,
+      name: "Mercedes S-Class",
+      brand: "Mercedes",
+      image:
+        "https://images.pexels.com/photos/1040753/pexels-photo-1040753.jpeg",
+      price: 599,
+      originalPrice: 699,
+      passengers: 5,
+      transmission: "Auto",
+      doors: 4,
+      baggage: 3,
+      badge: "Comfort",
+      category: "luxury",
+    },
+    {
+      id: 13,
+      name: "Koenigsegg Regera",
+      brand: "Koenigsegg",
+      image:
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
+      price: 6999,
+      originalPrice: 7999,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Hypercar",
+      category: "exotic",
+    },
+    {
+      id: 14,
+      name: "BMW i8",
+      brand: "BMW",
+      image:
+        "https://images.pexels.com/photos/14487781/pexels-photo-14487781.jpeg",
+      price: 999,
+      originalPrice: 1199,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Hybrid",
+      category: "supercar",
+    },
+    {
+      id: 15,
+      name: "Maserati GranTurismo",
+      brand: "Maserati",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
+      price: 1399,
+      originalPrice: 1699,
+      passengers: 4,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 2,
+      badge: "Italian",
+      category: "luxury",
+    },
+    {
+      id: 16,
+      name: "Pagani Huayra",
+      brand: "Pagani",
+      image:
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
+      price: 8999,
+      originalPrice: 9999,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Art Piece",
+      category: "exotic",
+    },
+    {
+      id: 17,
+      name: "Lexus LC 500",
+      brand: "Lexus",
+      image:
+        "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg",
+      price: 799,
+      originalPrice: 999,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Reliable",
+      category: "luxury",
+    },
+    {
+      id: 18,
+      name: "Chevrolet Corvette ZR1",
+      brand: "Chevrolet",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
+      price: 1099,
+      originalPrice: 1299,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "American",
+      category: "supercar",
+    },
+    {
+      id: 19,
+      name: "Aston Martin DB11",
+      brand: "Aston Martin",
+      image:
+        "https://images.pexels.com/photos/14487781/pexels-photo-14487781.jpeg",
+      price: 1799,
+      originalPrice: 2099,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "British",
+      category: "luxury",
+    },
+    {
+      id: 20,
+      name: "Lotus Evija",
+      brand: "Lotus",
+      image:
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
+      price: 3999,
+      originalPrice: 4499,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Electric",
+      category: "exotic",
+    },
+    {
+      id: 21,
+      name: "Cadillac Escalade",
+      brand: "Cadillac",
+      image:
+        "https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg",
+      price: 699,
+      originalPrice: 899,
+      passengers: 7,
+      transmission: "Auto",
+      doors: 5,
+      baggage: 5,
+      badge: "Spacious",
+      category: "luxury",
+    },
+    {
+      id: 22,
+      name: "Tesla Model S Plaid",
+      brand: "Tesla",
+      image:
+        "https://images.pexels.com/photos/1040753/pexels-photo-1040753.jpeg",
+      price: 899,
+      originalPrice: 1099,
+      passengers: 5,
+      transmission: "Auto",
+      doors: 4,
+      baggage: 3,
+      badge: "Silent",
+      category: "luxury",
+    },
+    {
+      id: 23,
+      name: "Nissan GT-R Nismo",
+      brand: "Nissan",
+      image: "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg",
+      price: 1299,
+      originalPrice: 1599,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Godzilla",
+      category: "supercar",
+    },
+    {
+      id: 24,
+      name: "McLaren P1",
+      brand: "McLaren",
+      image:
+        "https://images.pexels.com/photos/27985144/pexels-photo-27985144.jpeg",
+      price: 9999,
+      originalPrice: 11999,
+      passengers: 2,
+      transmission: "Auto",
+      doors: 2,
+      baggage: 1,
+      badge: "Legend",
+      category: "exotic",
     },
   ];
+
+  const filteredCars =
+    activeCategory === "all"
+      ? cars
+      : cars.filter((car) => car.category === activeCategory);
 
   const testimonials = [
     {
@@ -295,7 +571,7 @@ const Index = () => {
               <Download className="w-4 h-4" />
               <span className="text-sm font-medium">Download App</span>
             </button>
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl">
               <User className="w-4 h-4 inline mr-2" />
               Login
             </button>
@@ -306,57 +582,37 @@ const Index = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative h-[80vh] bg-cover bg-center"
+        className="relative h-screen bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg')",
+            "linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg')",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-5xl px-4">
-            <motion.div
-              className="mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="mb-6">
               <div className="inline-flex items-center space-x-2 bg-yellow-500/20 border border-yellow-500/30 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                 <Award className="w-4 h-4" />
                 <span>#1 Luxury Car Rental in Dubai</span>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              className="text-5xl md:text-8xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <h1 className="text-5xl md:text-8xl font-bold mb-6 leading-tight">
               LUXURY CAR RENTAL
               <br />
               <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                 DUBAI
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Looking to rent a luxury car in Dubai? BE VIP is the ultimate
-              luxury car rental Dubai offering you a wide selection of high-end
-              cars for rent.
-            </motion.p>
+            <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
+              Looking to rent a luxury car in Dubai? LUXURY DUBAI is the
+              ultimate luxury car rental offering you a wide selection of
+              high-end cars for rent.
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <button className="group bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-2xl transform hover:scale-105 flex items-center space-x-2">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+              <button className="group bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2">
                 <Car className="w-5 h-5" />
                 <span>Rent a Car</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -366,14 +622,9 @@ const Index = () => {
                 <Play className="w-5 h-5" />
                 <span>Watch Video</span>
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="flex flex-wrap justify-center gap-8 text-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
+            <div className="flex flex-wrap justify-center gap-8 text-sm">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <span>Free Delivery</span>
@@ -386,18 +637,13 @@ const Index = () => {
                 <Clock className="w-4 h-4 text-yellow-400" />
                 <span>24/7 Support</span>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* App Download Section */}
         <div className="absolute bottom-8 left-8 hidden lg:block">
-          <motion.div
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             <h3 className="text-white font-bold mb-3">Download Our App</h3>
             <div className="flex space-x-3">
               <div className="bg-black rounded-lg px-3 py-2 text-white text-xs font-medium cursor-pointer hover:bg-gray-800 transition-colors">
@@ -407,20 +653,14 @@ const Index = () => {
                 Google Play
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Search Form */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-12 -mt-16 relative z-10">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Book Your Dream Car
             </h3>
@@ -430,9 +670,7 @@ const Index = () => {
                   Pickup Location
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-                    <MapPin className="w-5 h-5 text-yellow-600" />
-                  </div>
+                  <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
                   <select
                     className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium bg-white"
                     value={selectedLocation}
@@ -452,9 +690,7 @@ const Index = () => {
                   Pickup Date
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-                    <Calendar className="w-5 h-5 text-yellow-600" />
-                  </div>
+                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
                   <input
                     type="date"
                     className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
@@ -467,9 +703,7 @@ const Index = () => {
                   Pickup Time
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-                    <Clock className="w-5 h-5 text-yellow-600" />
-                  </div>
+                  <Clock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
                   <input
                     type="time"
                     className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
@@ -482,9 +716,7 @@ const Index = () => {
                   Return Date
                 </label>
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-                    <Calendar className="w-5 h-5 text-yellow-600" />
-                  </div>
+                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
                   <input
                     type="date"
                     className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
@@ -493,48 +725,58 @@ const Index = () => {
               </div>
 
               <div className="flex items-end">
-                <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center space-x-2">
+                <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
                   <Search className="w-5 h-5" />
                   <span>Search Cars</span>
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? "bg-yellow-500 text-black shadow-lg"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {category.name} ({category.count})
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Cars Section */}
       <section id="fleet" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Latest Car Rental Offers in Dubai
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              BE VIP is the best place to rent luxury cars in Dubai. Choose from
-              our premium fleet of supercars, sports cars, and luxury vehicles.
-              All our cars are maintained to the highest standards and come with
-              comprehensive insurance coverage.
+              LUXURY DUBAI is the best place to rent luxury cars in Dubai.
+              Choose from our premium fleet of supercars, sports cars, and
+              luxury vehicles. All our cars are maintained to the highest
+              standards and come with comprehensive insurance coverage.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cars.map((car, index) => (
-              <motion.div
+            {filteredCars.map((car, index) => (
+              <div
                 key={car.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden border border-gray-100 transition-all duration-500 group"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -544,31 +786,21 @@ const Index = () => {
                   />
 
                   {/* Badge */}
-                  <div
-                    className={`absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-bold shadow-lg ${
-                      car.isNew
-                        ? "bg-green-500 text-white"
-                        : car.isPopular
-                          ? "bg-red-500 text-white"
-                          : car.isLimited
-                            ? "bg-purple-500 text-white"
-                            : car.isPremium
-                              ? "bg-blue-500 text-white"
-                              : car.isExclusive
-                                ? "bg-yellow-500 text-black"
-                                : "bg-gray-500 text-white"
-                    }`}
-                  >
+                  <div className="absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-bold shadow-lg bg-yellow-500 text-black">
                     {car.badge}
                   </div>
 
                   {/* Favorite Button */}
                   <button
                     onClick={() => toggleFavorite(car.id)}
-                    className="absolute top-4 right-4 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl transform hover:scale-110"
+                    className="absolute top-4 right-4 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg hover:shadow-xl"
                   >
                     <Heart
-                      className={`w-5 h-5 transition-colors ${favoriteCards.includes(car.id) ? "text-red-500 fill-current" : "text-gray-600"}`}
+                      className={`w-5 h-5 transition-colors ${
+                        favoriteCards.includes(car.id)
+                          ? "text-red-500 fill-current"
+                          : "text-gray-600"
+                      }`}
                     />
                   </button>
 
@@ -645,36 +877,30 @@ const Index = () => {
 
                   {/* Action Buttons */}
                   <div className="grid grid-cols-3 gap-3">
-                    <button className="bg-green-500 hover:bg-green-600 text-white py-3 px-2 rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg transform hover:scale-105 flex items-center justify-center">
+                    <button className="bg-green-500 hover:bg-green-600 text-white py-3 px-2 rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center">
                       <MessageCircle className="w-4 h-4 mr-1" />
                       <span className="hidden sm:inline">WhatsApp</span>
                     </button>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-2 rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg transform hover:scale-105 flex items-center justify-center">
+                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-2 rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center">
                       <Phone className="w-4 h-4 mr-1" />
                       <span className="hidden sm:inline">Call</span>
                     </button>
-                    <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black py-3 px-2 rounded-xl text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:scale-105">
+                    <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black py-3 px-2 rounded-xl text-sm font-bold transition-all shadow-md hover:shadow-lg">
                       Book Now
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* View More Button */}
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-2 mx-auto">
+          <div className="text-center mt-12">
+            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl flex items-center space-x-2 mx-auto">
               <span>View All Cars</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -684,13 +910,7 @@ const Index = () => {
         className="py-20 bg-gradient-to-b from-gray-50 to-white"
       >
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Luxury Dubai?
             </h2>
@@ -699,18 +919,13 @@ const Index = () => {
               We provide premium luxury car rental services with unmatched
               quality and customer satisfaction in Dubai.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:border-yellow-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-8 h-8 text-black" />
@@ -721,7 +936,7 @@ const Index = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -731,12 +946,7 @@ const Index = () => {
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 About Luxury Dubai
               </h2>
@@ -756,13 +966,13 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-600 mb-2">
-                    500+
+                    1000+
                   </div>
                   <div className="text-sm text-gray-600">Happy Customers</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-600 mb-2">
-                    50+
+                    100+
                   </div>
                   <div className="text-sm text-gray-600">Luxury Cars</div>
                 </div>
@@ -773,20 +983,14 @@ const Index = () => {
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
               </div>
-              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl">
                 Learn More About Us
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div className="relative">
               <img
-                src="https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg"
+                src="https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg"
                 alt="Luxury Car"
                 className="rounded-2xl shadow-2xl"
               />
@@ -797,7 +1001,7 @@ const Index = () => {
                   Exotic cars maintained to perfection
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -805,13 +1009,7 @@ const Index = () => {
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               What Our Customers Say
             </h2>
@@ -820,18 +1018,13 @@ const Index = () => {
               Don't just take our word for it. Here's what our satisfied
               customers have to say about their luxury car rental experience.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.id}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-lg mr-4">
@@ -857,7 +1050,7 @@ const Index = () => {
                 <p className="text-gray-600 leading-relaxed italic">
                   "{testimonial.comment}"
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -866,12 +1059,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Drive Luxury?
             </h2>
@@ -880,11 +1068,11 @@ const Index = () => {
               Dubai. Experience the thrill of driving your dream car today!
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center space-x-2">
+              <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
                 <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp: +971 50 123 4567</span>
               </button>
-              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center space-x-2">
+              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>Call Now</span>
               </button>
@@ -903,7 +1091,7 @@ const Index = () => {
                 <span>Best Prices</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
