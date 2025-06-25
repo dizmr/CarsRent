@@ -31,6 +31,30 @@ const cars = [
     image: "/cars/mustang.jpg",
     rating: 4.5,
   },
+  {
+    name: "Lamborghini Huracán",
+    description: "A powerful V10 supercar that combines luxury, speed, and aggressive styling.",
+    image: "/cars/lamborghini.jpg",
+    rating: 4.9,
+  },
+  {
+    name: "Mercedes-AMG GT",
+    description: "A luxury performance car with elegant design and thrilling performance.",
+    image: "/cars/mercedes.jpg",
+    rating: 4.8,
+  },
+  {
+    name: "BMW M8 Competition",
+    description: "A premium sports coupe offering raw power, refined luxury, and advanced tech.",
+    image: "/cars/m8.jpg",
+    rating: 4.7,
+  },
+  {
+    name: "Audi R8 V10",
+    description: "A sleek, high-performance machine with a naturally aspirated V10 engine.",
+    image: "/cars/r8.jpg",
+    rating: 4.8,
+  },
 ];
 
 export default function CarsShowcase() {
