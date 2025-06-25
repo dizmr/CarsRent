@@ -28,7 +28,6 @@ import {
   Twitter,
   Youtube,
   Play,
-
 } from "lucide-react";
 
 const Index = () => {
@@ -616,8 +615,6 @@ const Index = () => {
             </motion.div>
           </div>
         </div>
-
-
       </section>
 
       {/* Search Form */}
@@ -653,12 +650,6 @@ const Index = () => {
                   <div className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <MapPin className="w-5 h-5 text-yellow-600" />
                   </div>
-                    <option>Dubai Marina</option>
-                    <option>Downtown Dubai</option>
-                    <option>Dubai Airport</option>
-                    <option>Abu Dhabi</option>
-                    <option>Sharjah</option>
-                  </select>
                 </div>
               </div>
 
