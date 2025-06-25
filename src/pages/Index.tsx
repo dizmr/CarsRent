@@ -501,8 +501,8 @@ const Index = () => {
             "linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg')",
         }}
       >
-        {/* Trust Metrics - Bottom Right */}
-        <div className="absolute bottom-32 right-8 z-20 hidden lg:flex flex-col space-y-4">
+        {/* Trust Metrics - Left Side */}
+        <div className="absolute top-1/2 left-8 transform -translate-y-1/2 z-20 hidden lg:flex flex-col space-y-4">
           <motion.div
             className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20"
             initial={{ opacity: 0, x: 50 }}
