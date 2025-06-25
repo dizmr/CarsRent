@@ -636,9 +636,11 @@ const Index = () => {
                   Pickup Location
                 </label>
                 <div className="relative">
-                  <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 pointer-events-none">
+                    <MapPin className="w-5 h-5 text-yellow-600" />
+                  </div>
                   <select
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium bg-white"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium bg-white relative z-0"
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
                   >
@@ -656,10 +658,12 @@ const Index = () => {
                   Pickup Date
                 </label>
                 <div className="relative">
-                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 pointer-events-none">
+                    <Calendar className="w-5 h-5 text-yellow-600" />
+                  </div>
                   <input
                     type="date"
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium relative z-0"
                   />
                 </div>
               </div>
@@ -669,10 +673,12 @@ const Index = () => {
                   Pickup Time
                 </label>
                 <div className="relative">
-                  <Clock className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 pointer-events-none">
+                    <Clock className="w-5 h-5 text-yellow-600" />
+                  </div>
                   <input
                     type="time"
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium relative z-0"
                   />
                 </div>
               </div>
@@ -682,10 +688,12 @@ const Index = () => {
                   Return Date
                 </label>
                 <div className="relative">
-                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-600 z-10" />
+                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 pointer-events-none">
+                    <Calendar className="w-5 h-5 text-yellow-600" />
+                  </div>
                   <input
                     type="date"
-                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium"
+                    className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all font-medium relative z-0"
                   />
                 </div>
               </div>
