@@ -501,35 +501,6 @@ const Index = () => {
             "linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/18003058/pexels-photo-18003058.jpeg')",
         }}
       >
-        {/* Trust Metrics - Left Side */}
-        <div className="absolute top-1/2 left-8 transform -translate-y-1/2 z-20 hidden lg:flex flex-col space-y-4">
-          <motion.div
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <div className="flex items-center space-x-2 mb-1">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span className="text-white font-bold text-lg">4.9</span>
-            </div>
-            <p className="text-gray-300 text-sm">Customer Rating</p>
-          </motion.div>
-
-          <motion.div
-            className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/20"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <div className="flex items-center space-x-2 mb-1">
-              <Shield className="w-5 h-5 text-yellow-400" />
-              <span className="text-white font-bold text-lg">24/7</span>
-            </div>
-            <p className="text-gray-300 text-sm">Support</p>
-          </motion.div>
-        </div>
-
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-5xl px-4">
             <motion.div
@@ -614,6 +585,85 @@ const Index = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Trust Metrics Block */}
+      <section className="py-8 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {/* Customer Rating */}
+            <motion.div
+              className="flex items-center space-x-4 bg-gradient-to-r from-yellow-50 to-yellow-100 px-6 py-4 rounded-2xl border border-yellow-200 shadow-sm"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center">
+                <Star className="w-6 h-6 text-black fill-current" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">4.9</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Customer Rating
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Support */}
+            <motion.div
+              className="flex items-center space-x-4 bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 rounded-2xl border border-blue-200 shadow-sm"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">24/7</div>
+                <div className="text-sm text-gray-600 font-medium">Support</div>
+              </div>
+            </motion.div>
+
+            {/* Happy Customers */}
+            <motion.div
+              className="flex items-center space-x-4 bg-gradient-to-r from-green-50 to-green-100 px-6 py-4 rounded-2xl border border-green-200 shadow-sm"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">1000+</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Happy Customers
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Premium Cars */}
+            <motion.div
+              className="flex items-center space-x-4 bg-gradient-to-r from-purple-50 to-purple-100 px-6 py-4 rounded-2xl border border-purple-200 shadow-sm"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <Car className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">100+</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Premium Cars
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
