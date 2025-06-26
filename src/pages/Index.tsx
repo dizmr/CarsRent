@@ -33,23 +33,6 @@ import {
 
 const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState("Dubai");
-  const [favoriteCards, setFavoriteCards] = useState<number[]>([]);
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const toggleFavorite = (carId: number) => {
-    setFavoriteCards((prev) =>
-      prev.includes(carId)
-        ? prev.filter((id) => id !== carId)
-        : [...prev, carId],
-    );
-  };
-
-  const categories = [
-    { id: "all", name: "All Cars", count: 18 },
-    { id: "supercar", name: "Supercars", count: 6 },
-    { id: "luxury", name: "Luxury", count: 8 },
-    { id: "exotic", name: "Exotic", count: 4 },
-  ];
 
   const cars = [
     {
