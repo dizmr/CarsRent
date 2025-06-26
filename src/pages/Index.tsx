@@ -33,8 +33,6 @@ import {
 
 const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState("Dubai");
-    {
-      id: 1,
       name: "Rolls Royce Cullinan",
       brand: "Rolls Royce",
       image:
