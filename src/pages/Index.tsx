@@ -360,37 +360,102 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Contact Bar */}
-      <div className="bg-luxury-dark-950 text-white py-3 border-b border-luxury-dark-800">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-2 hover:text-luxury-gold-400 transition-colors">
-              <Phone className="w-4 h-4" />
-              <span>+971 50 123 4567</span>
+      <div className="relative bg-gradient-to-r from-luxury-dark-950 via-black to-luxury-dark-950 text-white py-4 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold-400/20 to-transparent"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+            {/* Contact Information */}
+            <div className="flex flex-wrap items-center gap-6 lg:gap-8">
+              <motion.div
+                className="group flex items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05, y: -1 }}
+              >
+                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Phone className="w-4 h-4 text-luxury-gold-400" />
+                </div>
+                <span className="text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  +971 50 123 4567
+                </span>
+              </motion.div>
+
+              <motion.div
+                className="group flex items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05, y: -1 }}
+              >
+                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Mail className="w-4 h-4 text-luxury-gold-400" />
+                </div>
+                <span className="hidden md:inline text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  info@luxurysupercarsdubai.com
+                </span>
+                <span className="md:hidden text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  Email Us
+                </span>
+              </motion.div>
+
+              <motion.div
+                className="hidden lg:flex group items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05, y: -1 }}
+              >
+                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Globe className="w-4 h-4 text-luxury-gold-400" />
+                </div>
+                <span className="text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  Dubai Marina Showroom
+                </span>
+              </motion.div>
             </div>
-            <div className="flex items-center space-x-2 hover:text-luxury-gold-400 transition-colors">
-              <Mail className="w-4 h-4" />
-              <span>info@luxurysupercarsdubai.com</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-2 hover:text-luxury-gold-400 transition-colors">
-              <Globe className="w-4 h-4" />
-              <span>Showroom: Dubai Marina</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-6">
-            <div className="hidden sm:flex items-center space-x-4 text-xs">
-              <span className="hover:text-luxury-gold-400 transition-colors cursor-pointer">
-                العربية
-              </span>
-              <span className="text-luxury-dark-400">|</span>
-              <span className="text-luxury-gold-400 font-semibold">
-                English
-              </span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Facebook className="w-4 h-4 hover:text-blue-400 transition-colors cursor-pointer" />
-              <Instagram className="w-4 h-4 hover:text-pink-400 transition-colors cursor-pointer" />
-              <Twitter className="w-4 h-4 hover:text-blue-400 transition-colors cursor-pointer" />
-              <Youtube className="w-4 h-4 hover:text-red-400 transition-colors cursor-pointer" />
+
+            {/* Right Side - Languages & Social */}
+            <div className="flex items-center gap-6">
+              {/* Language Selector */}
+              <div className="flex items-center bg-white/5 rounded-full px-4 py-2">
+                <motion.span
+                  className="text-xs font-medium hover:text-luxury-gold-400 transition-colors cursor-pointer px-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  العربية
+                </motion.span>
+                <span className="text-luxury-dark-400 text-xs">|</span>
+                <motion.span
+                  className="text-luxury-gold-400 font-semibold text-xs px-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  English
+                </motion.span>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center space-x-3">
+                <motion.div
+                  className="p-2 bg-white/10 hover:bg-blue-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Facebook className="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition-colors" />
+                </motion.div>
+                <motion.div
+                  className="p-2 bg-white/10 hover:bg-pink-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Instagram className="w-4 h-4 text-gray-300 group-hover:text-pink-400 transition-colors" />
+                </motion.div>
+                <motion.div
+                  className="p-2 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Twitter className="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition-colors" />
+                </motion.div>
+                <motion.div
+                  className="p-2 bg-white/10 hover:bg-red-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <Youtube className="w-4 h-4 text-gray-300 group-hover:text-red-400 transition-colors" />
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
