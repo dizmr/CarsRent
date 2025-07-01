@@ -1276,43 +1276,49 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-luxury-dark-100 relative"
+                className="group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-luxury-dark-100 relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8 }}
               >
-                <Quote className="w-8 h-8 text-luxury-gold-400 mb-4" />
-                <p className="text-luxury-dark-600 leading-relaxed mb-6 italic">
-                  "{testimonial.comment}"
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-full flex items-center justify-center text-black font-bold text-lg mr-4">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-luxury-dark-900">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-sm text-luxury-dark-600">
-                        {testimonial.location}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="flex items-center mb-1">
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <Quote className="w-10 h-10 text-luxury-gold-400" />
+                    <div className="flex items-center space-x-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 text-luxury-gold-500 fill-current"
+                          className="w-5 h-5 text-luxury-gold-500 fill-current"
                         />
                       ))}
                     </div>
-                    <p className="text-xs text-luxury-dark-500">
-                      {testimonial.date}
-                    </p>
+                  </div>
+
+                  <p className="text-luxury-dark-600 leading-relaxed mb-8 italic text-lg">
+                    "{testimonial.comment}"
+                  </p>
+
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-full flex items-center justify-center text-black font-bold text-xl shadow-lg">
+                      {testimonial.avatar}
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-luxury-dark-900 text-lg">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-luxury-dark-600 font-medium">
+                        {testimonial.location}
+                      </p>
+                      <p className="text-xs text-luxury-dark-500 mt-1">
+                        {testimonial.date}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
