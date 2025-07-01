@@ -1106,26 +1106,32 @@ const Index = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-luxury-dark-100 group hover:border-luxury-gold-300"
+                className="group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-luxury-dark-100 hover:border-luxury-gold-300 relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8 }}
               >
-                <motion.div
-                  className="w-16 h-16 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-2xl flex items-center justify-center mb-6"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <service.icon className="w-8 h-8 text-black" />
-                </motion.div>
-                <h3 className="text-xl font-bold text-luxury-dark-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-luxury-dark-600 leading-relaxed">
-                  {service.description}
-                </p>
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <motion.div
+                    className="w-20 h-20 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-3xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <service.icon className="w-10 h-10 text-black" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-luxury-dark-900 mb-4 group-hover:text-luxury-gold-700 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-luxury-dark-600 leading-relaxed text-lg">
+                    {service.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
