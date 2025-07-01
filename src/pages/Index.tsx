@@ -397,7 +397,7 @@ const Index = () => {
       </div>
 
       {/* Main Navigation */}
-      <header className="bg-white shadow-lg border-b-2 border-luxury-dark-100 sticky top-0 z-50">
+      <header className="bg-white/95 backdrop-blur-xl shadow-luxury border-b border-luxury-dark-100/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-xl flex items-center justify-center shadow-lg">
