@@ -1328,52 +1328,97 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-luxury-dark-900 via-black to-luxury-dark-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative bg-gradient-to-br from-luxury-dark-900 via-black to-luxury-dark-950 text-white py-24 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold-400/20 to-transparent"></div>
+        </div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for the Ultimate Drive?
+            <motion.div
+              className="inline-flex items-center space-x-2 bg-luxury-gold-500/20 border border-luxury-gold-500/30 text-luxury-gold-400 px-6 py-3 rounded-full text-sm font-medium mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Zap className="w-4 h-4" />
+              <span>Book Now & Get Instant Confirmation</span>
+            </motion.div>
+
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+              Ready for the
+              <br />
+              <span className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 bg-clip-text text-transparent">
+                Ultimate Drive?
+              </span>
             </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+
+            <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
               Contact us now to book your dream supercar and experience the
               pinnacle of automotive luxury in Dubai.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <motion.button
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="group bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3"
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-6 h-6" />
                 <span>WhatsApp: +971 50 123 4567</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button
-                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3"
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 <span>Call Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </div>
-            <div className="flex justify-center space-x-6 text-sm opacity-75">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>Instant Booking Confirmation</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4" />
-                <span>Fully Insured & Licensed</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <ThumbsUp className="w-4 h-4" />
-                <span>Best Prices Guaranteed</span>
-              </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <motion.div
+                className="flex flex-col items-center space-y-2"
+                whileHover={{ scale: 1.05, y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="p-3 bg-luxury-gold-500/20 rounded-full">
+                  <CheckCircle className="w-6 h-6 text-luxury-gold-400" />
+                </div>
+                <span className="font-semibold">
+                  Instant Booking Confirmation
+                </span>
+              </motion.div>
+              <motion.div
+                className="flex flex-col items-center space-y-2"
+                whileHover={{ scale: 1.05, y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="p-3 bg-luxury-gold-500/20 rounded-full">
+                  <Shield className="w-6 h-6 text-luxury-gold-400" />
+                </div>
+                <span className="font-semibold">Fully Insured & Licensed</span>
+              </motion.div>
+              <motion.div
+                className="flex flex-col items-center space-y-2"
+                whileHover={{ scale: 1.05, y: -3 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="p-3 bg-luxury-gold-500/20 rounded-full">
+                  <ThumbsUp className="w-6 h-6 text-luxury-gold-400" />
+                </div>
+                <span className="font-semibold">Best Prices Guaranteed</span>
+              </motion.div>
             </div>
           </motion.div>
         </div>
