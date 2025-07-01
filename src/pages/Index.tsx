@@ -1016,18 +1016,20 @@ const Index = () => {
                   {/* Price */}
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <div className="text-2xl font-bold text-luxury-dark-900">
-                        ${car.pricePerDay.toLocaleString()}{" "}
-                        <span className="text-lg font-normal text-luxury-dark-500">
+                      <div className="flex items-baseline space-x-2">
+                        <span className="text-3xl font-bold bg-gradient-to-r from-luxury-gold-500 to-luxury-gold-700 bg-clip-text text-transparent">
+                          ${car.pricePerDay.toLocaleString()}
+                        </span>
+                        <span className="text-lg font-medium text-luxury-dark-500">
                           /day
                         </span>
                       </div>
-                      <div className="text-sm text-luxury-dark-500 line-through">
+                      <div className="text-sm text-luxury-dark-400 line-through">
                         ${car.originalPrice.toLocaleString()}
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-sm text-green-600 font-semibold">
+                      <div className="bg-gradient-to-r from-green-100 to-green-50 text-green-700 px-3 py-2 rounded-full text-xs font-bold border border-green-200">
                         Save ${car.originalPrice - car.pricePerDay}
                       </div>
                     </div>
@@ -1036,16 +1038,16 @@ const Index = () => {
                   {/* Action Buttons */}
                   <div className="flex gap-3">
                     <motion.button
-                      className="flex-1 bg-luxury-gold-500 hover:bg-luxury-gold-600 text-black font-semibold py-3 rounded-xl transition-colors duration-200"
-                      whileHover={{ scale: 1.02 }}
+                      className="flex-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black font-bold py-3 rounded-xl transition-all shadow-lg hover:shadow-xl"
+                      whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={!car.available}
                     >
                       {car.available ? "Book Now" : "Notify When Available"}
                     </motion.button>
                     <motion.button
-                      className="px-6 py-3 border border-luxury-dark-300 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-colors duration-200 flex items-center space-x-2"
-                      whileHover={{ scale: 1.02 }}
+                      className="px-6 py-3 border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-all backdrop-blur-sm flex items-center space-x-2"
+                      whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <span>Details</span>
