@@ -1165,46 +1165,63 @@ const Index = () => {
                 more. Each vehicle undergoes rigorous inspection and maintenance
                 to ensure peak performance and absolute safety.
               </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-luxury-gold-600 mb-2">
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <motion.div
+                  className="bg-gradient-to-br from-luxury-gold-50 to-luxury-gold-100 rounded-2xl p-6 text-center border border-luxury-gold-200"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-4xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-700 bg-clip-text text-transparent mb-2">
                     50+
                   </div>
-                  <div className="text-sm text-luxury-dark-600">
+                  <div className="text-sm font-semibold text-luxury-dark-700">
                     Luxury Vehicles
                   </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-luxury-gold-600 mb-2">
+                </motion.div>
+                <motion.div
+                  className="bg-gradient-to-br from-luxury-gold-50 to-luxury-gold-100 rounded-2xl p-6 text-center border border-luxury-gold-200"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-4xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-700 bg-clip-text text-transparent mb-2">
                     1000+
                   </div>
-                  <div className="text-sm text-luxury-dark-600">
+                  <div className="text-sm font-semibold text-luxury-dark-700">
                     Satisfied Customers
                   </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-luxury-gold-600 mb-2">
+                </motion.div>
+                <motion.div
+                  className="bg-gradient-to-br from-luxury-gold-50 to-luxury-gold-100 rounded-2xl p-6 text-center border border-luxury-gold-200"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-4xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-700 bg-clip-text text-transparent mb-2">
                     24/7
                   </div>
-                  <div className="text-sm text-luxury-dark-600">
+                  <div className="text-sm font-semibold text-luxury-dark-700">
                     Customer Support
                   </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-luxury-gold-600 mb-2">
+                </motion.div>
+                <motion.div
+                  className="bg-gradient-to-br from-luxury-gold-50 to-luxury-gold-100 rounded-2xl p-6 text-center border border-luxury-gold-200"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-4xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-700 bg-clip-text text-transparent mb-2">
                     6+
                   </div>
-                  <div className="text-sm text-luxury-dark-600">
+                  <div className="text-sm font-semibold text-luxury-dark-700">
                     Years Experience
                   </div>
-                </div>
+                </motion.div>
               </div>
               <motion.button
-                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center space-x-3"
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Learn More About Us
+                <span>Learn More About Us</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>
 
