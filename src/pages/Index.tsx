@@ -1061,19 +1061,19 @@ const Index = () => {
 
           {/* View All Button */}
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <motion.button
-              className="bg-luxury-gold-500 hover:bg-luxury-gold-600 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl flex items-center space-x-2 mx-auto"
-              whileHover={{ scale: 1.05, y: -2 }}
+              className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-12 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center space-x-3 mx-auto"
+              whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
             >
               <span>View Complete Fleet</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </motion.div>
         </div>
