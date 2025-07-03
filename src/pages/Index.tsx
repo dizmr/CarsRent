@@ -719,19 +719,26 @@ const Index = () => {
               </div>
             </motion.div>
 
-          <nav className="hidden lg:flex items-center space-x-8 text-luxury-dark-700 font-medium">
-            <a
+          {/* Enhanced Navigation */}
+          <nav className="hidden lg:flex items-center space-x-2">
+            <motion.a
               href="#home"
-              className="hover:text-luxury-gold-600 transition-colors border-b-2 border-transparent hover:border-luxury-gold-600 pb-1"
+              className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Home
-            </a>
-            <a
+              <span className="relative z-10">Home</span>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+            </motion.a>
+            <motion.a
               href="#fleet"
-              className="hover:text-luxury-gold-600 transition-colors border-b-2 border-transparent hover:border-luxury-gold-600 pb-1"
+              className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Our Fleet
-            </a>
+              <span className="relative z-10">Our Fleet</span>
+              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+            </motion.a>
             <div className="relative group">
               <button className="flex items-center space-x-1 hover:text-luxury-gold-600 transition-colors border-b-2 border-transparent hover:border-luxury-gold-600 pb-1">
                 <span>Car Types</span>
