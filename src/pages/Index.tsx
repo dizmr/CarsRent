@@ -742,7 +742,7 @@ const Index = () => {
 
               <div className="relative group">
                 <motion.button
-                  className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 flex items-center space-x-1 group"
+                  className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 flex items-center space-x-1"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -751,6 +751,50 @@ const Index = () => {
                   <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                 </motion.button>
                 <div className="absolute top-full left-0 mt-3 w-56 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-luxury-gold-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                  <div className="py-3">
+                    <a href="#sports" className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors">Sports Cars</a>
+                    <a href="#luxury" className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors">Luxury Cars</a>
+                    <a href="#convertible" className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors">Convertibles</a>
+                    <a href="#electric" className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors">Electric Cars</a>
+                    <a href="#suv" className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors">Luxury SUVs</a>
+                  </div>
+                </div>
+              </div>
+              <motion.a href="#services" className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <span className="relative z-10">Services</span>
+                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              </motion.a>
+              <motion.a href="#about" className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <span className="relative z-10">About Us</span>
+                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              </motion.a>
+              <motion.a href="#contact" className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <span className="relative z-10">Contact</span>
+                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              </motion.a>
+            </nav>
+
+            {/* Enhanced Right Section */}
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-2 bg-luxury-gold-50/50 px-4 py-2 rounded-xl">
+                <Shield className="w-4 h-4 text-luxury-gold-600" />
+                <span className="text-sm font-semibold text-luxury-dark-700">Licensed & Insured</span>
+              </div>
+              <motion.button
+                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-6 py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open("https://t.me/luxurysupercarsdubai", "_blank")}
+              >
+                <MessageCircle className="w-4 h-4 inline mr-2" />
+                Telegram
+              </motion.button>
+              <button className="lg:hidden text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
                 <div className="py-2">
                   <a
                     href="#sports"
