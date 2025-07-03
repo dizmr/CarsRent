@@ -740,11 +740,16 @@ const Index = () => {
               <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </motion.a>
             <div className="relative group">
-              <button className="flex items-center space-x-1 hover:text-luxury-gold-600 transition-colors border-b-2 border-transparent hover:border-luxury-gold-600 pb-1">
+              <motion.button
+                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 flex items-center space-x-1"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <span>Car Types</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              </motion.button>
+              <div className="absolute top-full left-0 mt-3 w-56 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-luxury-gold-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
                 <div className="py-2">
                   <a
                     href="#sports"
