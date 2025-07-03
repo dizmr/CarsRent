@@ -96,7 +96,7 @@ const Index = () => {
       description:
         "The 812 GTS represents the pinnacle of naturally aspirated V12 Ferrari convertibles with Novitec enhancements.",
       image:
-        "https://images.pexels.com/photos/1077785/pexels-photo-1077785.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Febb419f1b1b24b4faa1732d563c88742",
       pricePerDay: 10000,
       originalPrice: 11000,
       engine: "6.5L V12",
