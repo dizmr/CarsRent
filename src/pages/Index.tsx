@@ -1314,7 +1314,7 @@ const Index = () => {
                         </span>
                       </div>
                       <div className="text-sm text-luxury-dark-400 line-through">
-                        ${car.originalPrice.toLocaleString()}
+                        AED {car.originalPrice.toLocaleString()}
                       </div>
                     </div>
                     <div className="text-right">
