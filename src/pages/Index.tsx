@@ -1307,7 +1307,7 @@ const Index = () => {
                     <div>
                       <div className="flex items-baseline space-x-2">
                         <span className="text-3xl font-bold bg-gradient-to-r from-luxury-gold-500 to-luxury-gold-700 bg-clip-text text-transparent">
-                          ${car.pricePerDay.toLocaleString()}
+                          AED {car.pricePerDay.toLocaleString()}
                         </span>
                         <span className="text-lg font-medium text-luxury-dark-500">
                           /day
