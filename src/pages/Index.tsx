@@ -584,7 +584,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Contact Bar */}
-      <div className="relative bg-gradient-to-r from-luxury-dark-950 via-black to-luxury-dark-950 text-white py-4 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-luxury-dark-950 via-black to-luxury-dark-950 text-white py-2 sm:py-3 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold-400/20 to-transparent"></div>
