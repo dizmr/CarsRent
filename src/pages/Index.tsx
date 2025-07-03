@@ -1107,6 +1107,10 @@ const Index = () => {
                   className="w-full bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={() => {
+                    const fleetSection = document.getElementById("fleet");
+                    fleetSection?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   <Search className="w-5 h-5" />
                   <span>Search Fleet</span>
