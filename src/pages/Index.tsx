@@ -1319,7 +1319,7 @@ const Index = () => {
                     </div>
                     <div className="text-right">
                       <div className="bg-gradient-to-r from-green-100 to-green-50 text-green-700 px-3 py-2 rounded-full text-xs font-bold border border-green-200">
-                        Save ${car.originalPrice - car.pricePerDay}
+                        Save AED {car.originalPrice - car.pricePerDay}
                       </div>
                     </div>
                   </div>
