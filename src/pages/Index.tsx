@@ -1914,6 +1914,210 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Car Details Modal */}
+      {showCarModal && selectedCar && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Modal Header */}
+            <div className="relative">
+              <img
+                src={selectedCar.image}
+                alt={selectedCar.name}
+                className="w-full h-64 object-cover rounded-t-3xl"
+              />
+              <button
+                onClick={() => setShowCarModal(false)}
+                className="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-all"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-sm rounded-xl px-4 py-2">
+                <span className="text-white font-bold text-lg">
+                  {selectedCar.name}
+                </span>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Left Column - Details */}
+                <div>
+                  <h2 className="text-3xl font-bold text-luxury-dark-900 mb-4">
+                    {selectedCar.name}
+                  </h2>
+                  <p className="text-luxury-gold-600 font-semibold text-lg mb-4">
+                    {selectedCar.category}
+                  </p>
+                  <p className="text-luxury-dark-600 text-lg leading-relaxed mb-6">
+                    {selectedCar.description}
+                  </p>
+
+                  {/* Pricing */}
+                  <div className="bg-luxury-gold-50 rounded-2xl p-6 mb-6">
+                    <div className="flex items-baseline space-x-2 mb-2">
+                      <span className="text-4xl font-bold bg-gradient-to-r from-luxury-gold-600 to-luxury-gold-700 bg-clip-text text-transparent">
+                        AED {selectedCar.pricePerDay.toLocaleString()}
+                      </span>
+                      <span className="text-lg text-luxury-dark-600">/day</span>
+                    </div>
+                    {selectedCar.originalPrice && (
+                      <div className="flex items-center space-x-3">
+                        <span className="text-sm text-luxury-dark-400 line-through">
+                          AED {selectedCar.originalPrice.toLocaleString()}
+                        </span>
+                        <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-bold">
+                          Save AED{" "}
+                          {selectedCar.originalPrice - selectedCar.pricePerDay}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-luxury-dark-900 mb-4">
+                      Features
+                    </h3>
+                    <div className="grid grid-cols-1 gap-2">
+                      {selectedCar.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
+                          <CheckCircle className="w-5 h-5 text-luxury-gold-600" />
+                          <span className="text-luxury-dark-700">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Specifications */}
+                <div>
+                  <h3 className="text-xl font-bold text-luxury-dark-900 mb-6">
+                    Specifications
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Zap className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Engine
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.engine}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Gauge className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Power
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.power}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Zap className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Acceleration
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.acceleration}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Gauge className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Max Speed
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.maxSpeed}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Settings className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Transmission
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.transmission}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3 border-b border-luxury-dark-100">
+                      <div className="flex items-center space-x-2">
+                        <Users className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Seats
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.seats}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between py-3">
+                      <div className="flex items-center space-x-2">
+                        <Car className="w-5 h-5 text-luxury-gold-600" />
+                        <span className="font-medium text-luxury-dark-700">
+                          Doors
+                        </span>
+                      </div>
+                      <span className="text-luxury-dark-900 font-semibold">
+                        {selectedCar.doors}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="mt-8 space-y-4">
+                    <motion.button
+                      className="w-full bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => {
+                        window.open(
+                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${selectedCar.name}`,
+                          "_blank",
+                        );
+                        setShowCarModal(false);
+                      }}
+                    >
+                      Book This Car Now
+                    </motion.button>
+                    <motion.button
+                      className="w-full border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold py-4 rounded-xl transition-all"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => setShowCarModal(false)}
+                    >
+                      Close
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };
