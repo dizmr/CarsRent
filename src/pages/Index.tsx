@@ -152,7 +152,7 @@ const Index = () => {
       description:
         "The F8 Tributo Spider with Novitec modifications delivers even more extreme performance and styling.",
       image:
-        "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fb736595dc2a649d58386ffe1f42a7110",
       pricePerDay: 4000,
       originalPrice: 4500,
       engine: "3.9L V8 Twin-Turbo",
