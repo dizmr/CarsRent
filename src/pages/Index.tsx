@@ -1353,6 +1353,10 @@ const Index = () => {
                       className="px-6 py-3 border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-all backdrop-blur-sm flex items-center space-x-2"
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
+                      onClick={() => {
+                        setSelectedCar(car);
+                        setShowCarModal(true);
+                      }}
                     >
                       <span>Details</span>
                       <ArrowRight className="w-4 h-4" />
