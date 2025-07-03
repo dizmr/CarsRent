@@ -1669,12 +1669,15 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <motion.button
-                className="group bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3"
+                className="group bg-blue-500 hover:bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() =>
+                  window.open("https://t.me/luxurysupercarsdubai", "_blank")
+                }
               >
                 <MessageCircle className="w-6 h-6" />
-                <span>WhatsApp: +971 50 123 4567</span>
+                <span>Telegram: @luxurysupercarsdubai</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button
