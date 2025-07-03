@@ -236,7 +236,7 @@ const Index = () => {
       description:
         "The 488 Spider delivers exhilarating performance with the joy of open-air driving in true Ferrari style.",
       image:
-        "https://images.pexels.com/photos/4083523/pexels-photo-4083523.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F8f31a93318494307b89bd514715d079d",
       pricePerDay: 2500,
       originalPrice: 2900,
       engine: "3.9L V8 Twin-Turbo",
@@ -264,7 +264,7 @@ const Index = () => {
       description:
         "The Portofino offers the perfect blend of performance and comfort for grand touring adventures.",
       image:
-        "https://images.pexels.com/photos/17338596/pexels-photo-17338596.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F083cd0e483fb4ec68c44887e9878d52f",
       pricePerDay: 2500,
       originalPrice: 2800,
       engine: "3.9L V8 Twin-Turbo",
@@ -294,7 +294,7 @@ const Index = () => {
       description:
         "The Huracán STO (Super Trofeo Omologata) brings racing technology directly to the street.",
       image:
-        "https://images.pexels.com/photos/17632041/pexels-photo-17632041.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F91e816591b584a4989331bc113257319",
       pricePerDay: 4000,
       originalPrice: 4500,
       engine: "5.2L V10",
