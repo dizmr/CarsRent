@@ -180,7 +180,7 @@ const Index = () => {
       description:
         "The iconic F8 Tributo Spider in stunning yellow, delivering pure Ferrari driving emotion.",
       image:
-        "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F0ee01783215f48e58015a8d76e42a190",
       pricePerDay: 3800,
       originalPrice: 4200,
       engine: "3.9L V8 Twin-Turbo",
@@ -208,7 +208,7 @@ const Index = () => {
       description:
         "The F8 Tributo Spider in sleek black finish, combining elegance with raw performance.",
       image:
-        "https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F854a3c4d4bfa4d9cb2e349cd6ae4b7af",
       pricePerDay: 3500,
       originalPrice: 3900,
       engine: "3.9L V8 Twin-Turbo",
