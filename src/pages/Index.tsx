@@ -41,7 +41,7 @@ const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState("Dubai Marina");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCarBrand, setActiveCarBrand] = useState("all");
-  const [selectedCar, setSelectedCar] = useState(null);
+  const [selectedCar, setSelectedCar] = useState<any>(null);
   const [showCarModal, setShowCarModal] = useState(false);
 
   const carBrands = [
