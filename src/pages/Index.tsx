@@ -595,41 +595,41 @@ const Index = () => {
             {/* Contact Information */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 text-xs sm:text-sm">
               <motion.div
-                className="group flex items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.05, y: -1 }}
+                className="group flex items-center space-x-1 bg-white/5 hover:bg-white/10 px-2 py-1 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -1 }}
               >
-                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
-                  <Phone className="w-4 h-4 text-luxury-gold-400" />
+                <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Phone className="w-3 h-3 text-luxury-gold-400" />
                 </div>
-                <span className="text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                <span className="font-medium group-hover:text-luxury-gold-400 transition-colors">
                   +971 50 123 4567
                 </span>
               </motion.div>
 
               <motion.div
-                className="group flex items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.05, y: -1 }}
+                className="group flex items-center space-x-1 bg-white/5 hover:bg-white/10 px-2 py-1 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -1 }}
               >
-                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
-                  <Mail className="w-4 h-4 text-luxury-gold-400" />
+                <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Mail className="w-3 h-3 text-luxury-gold-400" />
                 </div>
-                <span className="hidden md:inline text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
+                <span className="hidden sm:inline font-medium group-hover:text-luxury-gold-400 transition-colors">
                   info@luxurysupercarsdubai.com
                 </span>
-                <span className="md:hidden text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
-                  Email Us
+                <span className="sm:hidden font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  Email
                 </span>
               </motion.div>
 
               <motion.div
-                className="hidden lg:flex group items-center space-x-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.05, y: -1 }}
+                className="hidden md:flex group items-center space-x-1 bg-white/5 hover:bg-white/10 px-2 py-1 rounded-full transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.02, y: -1 }}
               >
-                <div className="p-2 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
-                  <Globe className="w-4 h-4 text-luxury-gold-400" />
+                <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+                  <Globe className="w-3 h-3 text-luxury-gold-400" />
                 </div>
-                <span className="text-sm font-medium group-hover:text-luxury-gold-400 transition-colors">
-                  Dubai Marina Showroom
+                <span className="font-medium group-hover:text-luxury-gold-400 transition-colors">
+                  Dubai Marina
                 </span>
               </motion.div>
             </div>
