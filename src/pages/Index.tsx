@@ -784,9 +784,12 @@ const Index = () => {
               className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-6 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open("https://t.me/luxurysupercarsdubai", "_blank")
+              }
             >
               <MessageCircle className="w-4 h-4 inline mr-2" />
-              WhatsApp
+              Telegram
             </motion.button>
 
             <button
