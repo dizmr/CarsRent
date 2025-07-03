@@ -96,7 +96,7 @@ const Index = () => {
       description:
         "The 812 GTS represents the pinnacle of naturally aspirated V12 Ferrari convertibles with Novitec enhancements.",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Febb419f1b1b24b4faa1732d563c88742",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fcb5c6b453afa4547a7aa1a4f835ddb37",
       pricePerDay: 10000,
       originalPrice: 11000,
       engine: "6.5L V12",
@@ -124,7 +124,7 @@ const Index = () => {
       description:
         "The 296 GTS combines a turbocharged V6 with electric assistance for incredible performance and efficiency.",
       image:
-        "https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F95a1847b6f7c458cbd0256e7d930b48e",
       pricePerDay: 4500,
       originalPrice: 5000,
       engine: "3.0L V6 Hybrid",
