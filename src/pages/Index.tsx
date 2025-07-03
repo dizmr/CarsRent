@@ -1605,7 +1605,7 @@ const Index = () => {
               <p className="text-sm">
                 Starting from{" "}
                 <span className="text-luxury-gold-400 font-bold text-lg">
-                  AED 3,700
+                  AED 1,000
                 </span>{" "}
                 per day
               </p>
