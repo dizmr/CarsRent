@@ -583,6 +583,8 @@ const Index = () => {
     },
   ];
 
+  console.log("About to return component");
+
   return (
     <div className="min-h-screen bg-white">
       {/* Top Contact Bar */}
