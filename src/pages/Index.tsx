@@ -68,7 +68,7 @@ const Index = () => {
       description:
         "The world's first Ferrari SUV combines uncompromising performance with the practicality of four doors and four seats.",
       image:
-        "https://images.pexels.com/photos/3849345/pexels-photo-3849345.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Febb419f1b1b24b4faa1732d563c88742",
       pricePerDay: 11000,
       originalPrice: 12000,
       engine: "6.5L V12",
