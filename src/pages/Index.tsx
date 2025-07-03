@@ -46,14 +46,16 @@ const Index = () => {
 
   const carBrands = [
     { id: "all", name: "All Brands" },
-    { id: "lamborghini", name: "Lamborghini" },
     { id: "ferrari", name: "Ferrari" },
-    { id: "mclaren", name: "McLaren" },
-    { id: "bugatti", name: "Bugatti" },
-    { id: "aston-martin", name: "Aston Martin" },
+    { id: "lamborghini", name: "Lamborghini" },
+    { id: "mercedes", name: "Mercedes-Benz" },
     { id: "bentley", name: "Bentley" },
-    { id: "rolls-royce", name: "Rolls Royce" },
-    { id: "mercedes", name: "Mercedes-AMG" },
+    { id: "aston-martin", name: "Aston Martin" },
+    { id: "audi", name: "Audi" },
+    { id: "bmw", name: "BMW" },
+    { id: "range-rover", name: "Range Rover" },
+    { id: "porsche", name: "Porsche" },
+    { id: "cadillac", name: "Cadillac" },
   ];
 
   const luxuryCars = [
