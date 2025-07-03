@@ -688,21 +688,36 @@ const Index = () => {
       </div>
 
       {/* Main Navigation */}
-      <header className="bg-white/95 backdrop-blur-xl shadow-luxury border-b border-luxury-dark-100/50 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-luxury-gold-400 to-luxury-gold-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Car className="w-7 h-7 text-black font-bold" />
-            </div>
-            <div>
-              <span className="text-2xl font-bold text-luxury-dark-900">
-                LUXURY SUPERCARS
-              </span>
-              <p className="text-xs text-luxury-dark-600 font-medium">
-                Dubai Premium Rental
-              </p>
-            </div>
-          </div>
+      <header className="relative bg-gradient-to-r from-white via-luxury-gold-50/30 to-white backdrop-blur-xl shadow-luxury border-b border-luxury-gold-200/30 sticky top-0 z-50 overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold-100/20 to-transparent"></div>
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-luxury-gold-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-1/4 w-24 h-24 bg-luxury-gold-500/10 rounded-full blur-2xl"></div>
+
+        <div className="container mx-auto px-4 py-5 relative z-10">
+          <div className="flex justify-between items-center">
+            {/* Enhanced Logo Section */}
+            <motion.div
+              className="flex items-center space-x-4"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative">
+                <div className="w-16 h-16 bg-gradient-to-br from-luxury-gold-400 via-luxury-gold-500 to-luxury-gold-600 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                  <Car className="w-9 h-9 text-black font-bold group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              </div>
+              <div className="relative">
+                <span className="text-3xl font-bold bg-gradient-to-r from-luxury-dark-900 via-luxury-dark-800 to-luxury-dark-900 bg-clip-text text-transparent tracking-tight">
+                  LUXURY SUPERCARS
+                </span>
+                <p className="text-sm text-luxury-gold-600 font-semibold tracking-wide">
+                  Dubai Premium Rental
+                </p>
+                <div className="absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-full"></div>
+              </div>
+            </motion.div>
 
           <nav className="hidden lg:flex items-center space-x-8 text-luxury-dark-700 font-medium">
             <a
