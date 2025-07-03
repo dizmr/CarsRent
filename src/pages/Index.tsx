@@ -1684,9 +1684,12 @@ const Index = () => {
                 className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-10 py-5 rounded-2xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-3"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() =>
+                  window.open("https://t.me/luxurysupercarsdubai", "_blank")
+                }
               >
-                <Phone className="w-6 h-6" />
-                <span>Call Now</span>
+                <MessageCircle className="w-6 h-6" />
+                <span>Book Now</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </div>
