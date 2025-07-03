@@ -635,49 +635,49 @@ const Index = () => {
             </div>
 
             {/* Right Side - Languages & Social */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
               {/* Language Selector */}
-              <div className="flex items-center bg-white/5 rounded-full px-4 py-2">
+              <div className="flex items-center bg-white/5 rounded-full px-2 py-1">
                 <motion.span
-                  className="text-xs font-medium hover:text-luxury-gold-400 transition-colors cursor-pointer px-2"
-                  whileHover={{ scale: 1.05 }}
+                  className="text-xs font-medium hover:text-luxury-gold-400 transition-colors cursor-pointer px-1"
+                  whileHover={{ scale: 1.02 }}
                 >
-                  العربية
+                  AR
                 </motion.span>
-                <span className="text-luxury-dark-400 text-xs">|</span>
+                <span className="text-luxury-dark-400 text-xs mx-1">|</span>
                 <motion.span
-                  className="text-luxury-gold-400 font-semibold text-xs px-2"
-                  whileHover={{ scale: 1.05 }}
+                  className="text-luxury-gold-400 font-semibold text-xs px-1"
+                  whileHover={{ scale: 1.02 }}
                 >
-                  English
+                  EN
                 </motion.span>
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
                 <motion.div
-                  className="p-2 bg-white/10 hover:bg-blue-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="p-1.5 bg-white/10 hover:bg-blue-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -1 }}
                 >
-                  <Facebook className="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition-colors" />
+                  <Facebook className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
                 </motion.div>
                 <motion.div
-                  className="p-2 bg-white/10 hover:bg-pink-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="p-1.5 bg-white/10 hover:bg-pink-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -1 }}
                 >
-                  <Instagram className="w-4 h-4 text-gray-300 group-hover:text-pink-400 transition-colors" />
+                  <Instagram className="w-3 h-3 text-gray-300 group-hover:text-pink-400 transition-colors" />
                 </motion.div>
                 <motion.div
-                  className="p-2 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="p-1.5 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -1 }}
                 >
-                  <Twitter className="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition-colors" />
+                  <Twitter className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
                 </motion.div>
                 <motion.div
-                  className="p-2 bg-white/10 hover:bg-red-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="p-1.5 bg-white/10 hover:bg-red-500/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -1 }}
                 >
-                  <Youtube className="w-4 h-4 text-gray-300 group-hover:text-red-400 transition-colors" />
+                  <Youtube className="w-3 h-3 text-gray-300 group-hover:text-red-400 transition-colors" />
                 </motion.div>
               </div>
             </div>
