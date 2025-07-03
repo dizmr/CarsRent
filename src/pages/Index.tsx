@@ -1338,6 +1338,12 @@ const Index = () => {
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={!car.available}
+                      onClick={() =>
+                        window.open(
+                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${car.name}`,
+                          "_blank",
+                        )
+                      }
                     >
                       {car.available ? "Book Now" : "Notify When Available"}
                     </motion.button>
