@@ -694,7 +694,7 @@ const Index = () => {
       description:
         "The RS7 combines stunning design with incredible performance in a practical four-door package.",
       image:
-        "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F05e9f942a94b4ef8aa3a201c988a2310",
       pricePerDay: 2000,
       originalPrice: 2300,
       engine: "4.0L V8 Twin-Turbo",
@@ -721,7 +721,8 @@ const Index = () => {
       category: "Performance SUV",
       description:
         "The SQ7 offers seven-seat practicality with the performance and luxury expected from an Audi Sport model.",
-      image: "https://images.pexels.com/photos/752615/pexels-photo-752615.jpeg",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Faf28e84d3d25473595ef0c9d39485377",
       pricePerDay: 1800,
       originalPrice: 2100,
       engine: "4.0L V8 Twin-Turbo",
@@ -749,7 +750,7 @@ const Index = () => {
       description:
         "The RS6 delivers supercar performance in a practical and stylish wagon body.",
       image:
-        "https://images.pexels.com/photos/26563770/pexels-photo-26563770.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fe1efccf5ae5a453eac8b791743b32a6b",
       pricePerDay: 1800,
       originalPrice: 2100,
       engine: "4.0L V8 Twin-Turbo",
@@ -777,7 +778,7 @@ const Index = () => {
       description:
         "The RS5 combines elegant coupe styling with powerful performance and Quattro all-wheel drive.",
       image:
-        "https://images.pexels.com/photos/3954449/pexels-photo-3954449.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fb3b2106e3c504b739de3c392daca4522",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "2.9L V6 Twin-Turbo",
@@ -805,7 +806,7 @@ const Index = () => {
       description:
         "The RS3 packs incredible performance into a compact sedan with the legendary five-cylinder engine.",
       image:
-        "https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Faceaa4128bcd44e89f2f8f14ae42c4b9",
       pricePerDay: 1000,
       originalPrice: 1300,
       engine: "2.5L I5 Turbo",
