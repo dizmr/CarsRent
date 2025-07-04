@@ -464,7 +464,7 @@ const Index = () => {
       description:
         "The AMG GT63 S combines four-door practicality with supercar-level performance.",
       image:
-        "https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fad9e5b76ead34438938232a0d9e3aaf0",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "4.0L V8 Twin-Turbo",
