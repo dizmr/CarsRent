@@ -2213,11 +2213,11 @@ const Index = () => {
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
-                  window.open("https://t.me/luxurysupercarsdubai", "_blank")
+                  window.open("https://t.me/vivawinsupport", "_blank")
                 }
               >
                 <MessageCircle className="w-6 h-6" />
-                <span>Telegram: @luxurysupercarsdubai</span>
+                <span>Telegram: @vivawinsupport</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button
@@ -2225,7 +2225,7 @@ const Index = () => {
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
-                  window.open("https://t.me/luxurysupercarsdubai", "_blank")
+                  window.open("https://t.me/vivawinsupport", "_blank")
                 }
               >
                 <MessageCircle className="w-6 h-6" />
@@ -2629,7 +2629,7 @@ const Index = () => {
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         window.open(
-                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${selectedCar.name}`,
+                          `https://t.me/vivawinsupport?text=I'm interested in booking the ${selectedCar.name}`,
                           "_blank",
                         );
                         setShowCarModal(false);
