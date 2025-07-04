@@ -1211,7 +1211,7 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <nav className="hidden lg:flex items-center space-x-2 overflow-visible">
+            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 overflow-visible flex-shrink min-w-0">
               <motion.a
                 href="#home"
                 className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
@@ -1305,22 +1305,22 @@ const Index = () => {
               </motion.a>
             </nav>
 
-            <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-              <div className="hidden lg:flex items-center space-x-2 bg-luxury-gold-50/50 px-3 py-2 rounded-xl">
-                <Shield className="w-4 h-4 text-luxury-gold-600" />
-                <span className="text-sm font-semibold text-luxury-dark-700 whitespace-nowrap">
+            <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 min-w-0">
+              <div className="hidden xl:flex items-center space-x-1 bg-luxury-gold-50/50 px-2 py-1.5 rounded-xl flex-shrink-0">
+                <Shield className="w-4 h-4 text-luxury-gold-600 flex-shrink-0" />
+                <span className="text-xs font-semibold text-luxury-dark-700 whitespace-nowrap">
                   Licensed & Insured
                 </span>
               </div>
               <motion.button
-                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
+                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-2 sm:px-4 py-2 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl text-xs sm:text-sm flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
                   window.open("https://t.me/vivawinsupport", "_blank")
                 }
               >
-                <MessageCircle className="w-4 h-4 inline mr-1 sm:mr-2" />
+                <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 inline mr-1" />
                 <span className="hidden sm:inline">Telegram</span>
                 <span className="sm:hidden">TG</span>
               </motion.button>
@@ -1519,13 +1519,13 @@ const Index = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
               initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               <motion.button
-                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2"
+                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2 w-full sm:w-auto justify-center"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
@@ -1533,18 +1533,18 @@ const Index = () => {
                   fleetSection?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                <Car className="w-5 h-5" />
-                <span>Browse Our Fleet</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Car className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">Browse Our Fleet</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </motion.button>
 
               <motion.button
-                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-8 py-4 rounded-xl text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2"
+                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2 w-full sm:w-auto justify-center"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Play className="w-5 h-5" />
-                <span>Watch Video</span>
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">Watch Video</span>
               </motion.button>
             </motion.div>
           </motion.div>
