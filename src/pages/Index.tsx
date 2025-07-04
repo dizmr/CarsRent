@@ -1083,7 +1083,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Top Contact Bar */}
       <div className="relative bg-gradient-to-r from-luxury-dark-950 via-black to-luxury-dark-950 text-white py-2 sm:py-3 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
