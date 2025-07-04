@@ -1723,9 +1723,9 @@ const Index = () => {
               <motion.div
                 key={car.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden border border-luxury-dark-100 transition-all duration-500"
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0.3, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
