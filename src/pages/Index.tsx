@@ -892,7 +892,7 @@ const Index = () => {
       description:
         "The M3 Competition combines everyday usability with extraordinary performance and precision.",
       image:
-        "https://images.pexels.com/photos/17632041/pexels-photo-17632041.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F01fe652c0da444038ad6fa2ce69a02f4",
       pricePerDay: 1300,
       originalPrice: 1600,
       engine: "3.0L I6 Twin-Turbo",
@@ -919,7 +919,8 @@ const Index = () => {
       category: "Luxury Sedan",
       description:
         "The 735i flagship sedan offers the perfect blend of luxury, comfort, and advanced technology.",
-      image: "https://images.pexels.com/photos/752615/pexels-photo-752615.jpeg",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fb5683a5a11a04bf6ae47c927c23f793c",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "3.0L I6 Turbo",
@@ -949,7 +950,7 @@ const Index = () => {
       description:
         "The Range Rover Vogue HSE represents the pinnacle of luxury SUV design and capability.",
       image:
-        "https://images.pexels.com/photos/4609896/pexels-photo-4609896.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fc50c72b3c91b4e42bde3793a737aeef4",
       pricePerDay: 1800,
       originalPrice: 2100,
       engine: "3.0L V6 Supercharged",
@@ -977,7 +978,7 @@ const Index = () => {
       description:
         "The Range Rover SVR in striking orange combines luxury with supercharged performance.",
       image:
-        "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F9495d037b0eb40b581f31641a1b58fa3",
       pricePerDay: 1400,
       originalPrice: 1700,
       engine: "5.0L V8 Supercharged",
