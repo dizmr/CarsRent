@@ -1201,7 +1201,7 @@ const Index = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </div>
               <div className="relative min-w-0 flex-shrink">
-                <span className="text-lg sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-luxury-dark-900 via-luxury-dark-800 to-luxury-dark-900 bg-clip-text text-transparent tracking-tight whitespace-nowrap">
+                <span className="text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-luxury-dark-900 via-luxury-dark-800 to-luxury-dark-900 bg-clip-text text-transparent tracking-tight whitespace-nowrap">
                   LUXURY SUPERCARS
                 </span>
                 <p className="text-xs sm:text-sm text-luxury-gold-600 font-semibold tracking-wide whitespace-nowrap">
