@@ -1440,9 +1440,9 @@ const Index = () => {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0.3, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="max-w-5xl mx-auto"
           >
             {/* Trust Badge */}
@@ -1459,9 +1459,9 @@ const Index = () => {
             {/* Main Headline */}
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
               Premium
               <br />
@@ -1475,9 +1475,9 @@ const Index = () => {
             {/* Subtitle */}
             <motion.p
               className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
             >
               Experience the ultimate luxury with Dubai's most exclusive fleet
               of supercars. From Lamborghini to Bugatti, we deliver
