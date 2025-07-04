@@ -1317,7 +1317,7 @@ const Index = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
-                  window.open("https://t.me/luxurysupercarsdubai", "_blank")
+                  window.open("https://t.me/vivawinsupport", "_blank")
                 }
               >
                 <MessageCircle className="w-4 h-4 inline mr-1 sm:mr-2" />
