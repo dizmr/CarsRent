@@ -1861,7 +1861,7 @@ const Index = () => {
                       disabled={!car.available}
                       onClick={() =>
                         window.open(
-                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
+                          `https://t.me/vivawinsupport?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
                           "_blank",
                         )
                       }
