@@ -352,7 +352,7 @@ const Index = () => {
       description:
         "The ultimate G-Wagon with Brabus modifications delivering extreme luxury and performance.",
       image:
-        "https://images.pexels.com/photos/4609896/pexels-photo-4609896.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F0f6d1263362e45d88a663c310214452d",
       pricePerDay: 3000,
       originalPrice: 3400,
       engine: "4.0L V8 Twin-Turbo",
@@ -380,7 +380,7 @@ const Index = () => {
       description:
         "The pinnacle of luxury SUVs with Brabus enhancements for ultimate performance and comfort.",
       image:
-        "https://images.pexels.com/photos/26563770/pexels-photo-26563770.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F9d43242b3eae45718c6c971aa42a5d9e",
       pricePerDay: 2500,
       originalPrice: 2900,
       engine: "4.0L V8 Twin-Turbo",
@@ -408,7 +408,7 @@ const Index = () => {
       description:
         "The AMG GT63 Coupe delivers pure performance in a stunning four-door package.",
       image:
-        "https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F45be1bcd5ad646d48f60f2c71ec4f5b5",
       pricePerDay: 2500,
       originalPrice: 2800,
       engine: "4.0L V8 Twin-Turbo",
@@ -436,7 +436,7 @@ const Index = () => {
       description:
         "The iconic G-Class with AMG performance, combining luxury with unmatched off-road capability.",
       image:
-        "https://images.pexels.com/photos/3954449/pexels-photo-3954449.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F2a4d00c7e9b34d279384e29b266bb93b",
       pricePerDay: 1800,
       originalPrice: 2100,
       engine: "4.0L V8 Twin-Turbo",
@@ -830,12 +830,12 @@ const Index = () => {
     {
       id: 28,
       brand: "bmw",
-      name: "BMW X6 M Competition Blue",
+      name: "BMW M4 Competition",
       category: "Performance SUV Coupe",
       description:
         "The X6 M Competition combines SUV practicality with coupe styling and M performance in stunning blue.",
       image:
-        "https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F0297c1aa9bc54804b6ee2dfd1b0bf189",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "4.4L V8 Twin-Turbo",
