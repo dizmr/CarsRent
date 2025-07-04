@@ -1008,7 +1008,7 @@ const Index = () => {
       description:
         "The Macan Sports delivers true Porsche DNA in a compact SUV package with exceptional handling.",
       image:
-        "https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Faadbc80879f74da09a3613ba5e0acb3d",
       pricePerDay: 1000,
       originalPrice: 1300,
       engine: "2.9L V6 Twin-Turbo",
@@ -1038,7 +1038,7 @@ const Index = () => {
       description:
         "The Escalade Sports Platinum offers American luxury at its finest with impressive performance and technology.",
       image:
-        "https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F1dc36dad5cc74bd78a7c9a810efe3d82",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "6.2L V8",
