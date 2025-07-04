@@ -1187,8 +1187,8 @@ const Index = () => {
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-luxury-gold-400/10 rounded-full blur-3xl"></div>
         <div className="absolute top-0 right-1/4 w-24 h-24 bg-luxury-gold-500/10 rounded-full blur-2xl"></div>
 
-        <div className="container mx-auto px-4 py-3 md:py-5 relative z-10">
-          <div className="flex justify-between items-center min-w-0">
+        <div className="container mx-auto px-4 py-3 md:py-5 relative z-10 overflow-hidden">
+          <div className="flex justify-between items-center min-w-0 w-full">
             <motion.div
               className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-shrink-0"
               whileHover={{ scale: 1.02 }}
@@ -1211,7 +1211,7 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <nav className="hidden lg:flex items-center space-x-2">
+            <nav className="hidden lg:flex items-center space-x-2 overflow-visible"
               <motion.a
                 href="#home"
                 className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
@@ -1547,6 +1547,8 @@ const Index = () => {
                 <span>Watch Video</span>
               </motion.button>
             </motion.div>
+
+
           </motion.div>
         </div>
       </section>
