@@ -522,7 +522,7 @@ const Index = () => {
       description:
         "The Continental GTC offers the ultimate in luxury convertible motoring with handcrafted excellence.",
       image:
-        "https://images.pexels.com/photos/17338596/pexels-photo-17338596.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F9ecbcb2cfc644a869b6988e5696f2cfd",
       pricePerDay: 2500,
       originalPrice: 2800,
       engine: "6.0L W12 Twin-Turbo",
@@ -550,7 +550,7 @@ const Index = () => {
       description:
         "The Continental GT combines handcrafted luxury with effortless performance for the ultimate grand touring experience.",
       image:
-        "https://images.pexels.com/photos/4083523/pexels-photo-4083523.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F24cb106fb3f246529379a6c84de1252c",
       pricePerDay: 2200,
       originalPrice: 2500,
       engine: "4.0L V8 Twin-Turbo",
@@ -608,7 +608,7 @@ const Index = () => {
       description:
         "The DBX 707 is the most powerful SUV Aston Martin has ever created, combining luxury with track-focused performance.",
       image:
-        "https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Ff284ad0a958e43dc947dcd2cea4ed1a7",
       pricePerDay: 2500,
       originalPrice: 2800,
       engine: "4.0L V8 Twin-Turbo",
@@ -636,7 +636,7 @@ const Index = () => {
       description:
         "The Vantage delivers pure driving emotion with perfect balance of power and precision engineering.",
       image:
-        "https://images.pexels.com/photos/1077785/pexels-photo-1077785.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F2d63047db9124077945d255d8cc99297",
       pricePerDay: 1800,
       originalPrice: 2100,
       engine: "4.0L V8 Twin-Turbo",
