@@ -1520,9 +1520,9 @@ const Index = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
             >
               <motion.button
                 className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2"
