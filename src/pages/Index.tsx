@@ -321,7 +321,8 @@ const Index = () => {
       category: "Convertible",
       description:
         "The Huracán EVO Spyder delivers the ultimate open-air Lamborghini experience with evolved performance.",
-      image: "https://images.pexels.com/photos/752615/pexels-photo-752615.jpeg",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Fec79236f75ec4cba8cc4faa2387dc107",
       pricePerDay: 3300,
       originalPrice: 3700,
       engine: "5.2L V10",
