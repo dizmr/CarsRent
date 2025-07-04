@@ -1386,7 +1386,7 @@ const Index = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden py-20"
       >
         <div className="absolute inset-0 z-0">
           <img
@@ -1443,7 +1443,7 @@ const Index = () => {
             initial={{ opacity: 0.3, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="max-w-5xl mx-auto"
+            className="max-w-5xl mx-auto pb-8"
           >
             {/* Trust Badge */}
             <motion.div
@@ -1519,31 +1519,31 @@ const Index = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4 mb-8"
               initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
               <motion.button
-                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2 w-full sm:w-auto justify-center"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                className="group bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all shadow-lg hover:shadow-2xl flex items-center space-x-2 w-full sm:w-auto max-w-xs sm:max-w-none justify-center"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => {
                   const fleetSection = document.getElementById("fleet");
                   fleetSection?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                <Car className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <Car className="w-5 h-5 flex-shrink-0" />
                 <span className="whitespace-nowrap">Browse Our Fleet</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </motion.button>
 
               <motion.button
-                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2 w-full sm:w-auto justify-center"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2 w-full sm:w-auto max-w-xs sm:max-w-none justify-center"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Play className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <Play className="w-5 h-5 flex-shrink-0" />
                 <span className="whitespace-nowrap">Watch Video</span>
               </motion.button>
             </motion.div>
