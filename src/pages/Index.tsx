@@ -484,34 +484,6 @@ const Index = () => {
       featured: false,
       rating: 4.6,
     },
-    {
-      id: 16,
-      brand: "mercedes",
-      name: "Mercedes GLC 63S Coupe",
-      category: "Performance SUV Coupe",
-      description:
-        "The GLC 63S Coupe combines SUV practicality with coupe styling and AMG performance.",
-      image:
-        "https://images.pexels.com/photos/3849345/pexels-photo-3849345.jpeg",
-      pricePerDay: 1300,
-      originalPrice: 1600,
-      engine: "4.0L V8 Twin-Turbo",
-      power: "510 HP",
-      acceleration: "3.8s 0-100km/h",
-      maxSpeed: "280 km/h",
-      transmission: "9-Speed Automatic",
-      seats: 5,
-      doors: 4,
-      features: [
-        "AMG Performance Package",
-        "Coupe Styling",
-        "All-Wheel Drive",
-        "Premium Interior",
-      ],
-      available: true,
-      featured: false,
-      rating: 4.5,
-    },
 
     // Bentley Models
     {
@@ -856,34 +828,7 @@ const Index = () => {
       featured: false,
       rating: 4.6,
     },
-    {
-      id: 29,
-      brand: "bmw",
-      name: "BMW M4 Competition",
-      category: "Performance Coupe",
-      description:
-        "The M4 Competition delivers pure driving pleasure with track-focused performance and precision.",
-      image:
-        "https://images.pexels.com/photos/3849345/pexels-photo-3849345.jpeg",
-      pricePerDay: 1400,
-      originalPrice: 1700,
-      engine: "3.0L I6 Twin-Turbo",
-      power: "510 HP",
-      acceleration: "3.5s 0-100km/h",
-      maxSpeed: "290 km/h",
-      transmission: "8-Speed Automatic",
-      seats: 4,
-      doors: 2,
-      features: [
-        "M Competition Package",
-        "Carbon Fiber Roof",
-        "M Sport Exhaust",
-        "Track Mode",
-      ],
-      available: true,
-      featured: false,
-      rating: 4.5,
-    },
+
     {
       id: 30,
       brand: "bmw",
