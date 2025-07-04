@@ -1182,32 +1182,32 @@ const Index = () => {
       </div>
 
       {/* Enhanced Main Navigation */}
-      <header className="relative bg-gradient-to-r from-white via-luxury-gold-50/30 to-white backdrop-blur-xl shadow-luxury border-b border-luxury-gold-200/30 sticky top-0 z-50 overflow-hidden">
+      <header className="relative bg-gradient-to-r from-white via-luxury-gold-50/30 to-white backdrop-blur-xl shadow-luxury border-b border-luxury-gold-200/30 sticky top-0 z-50 overflow-x-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold-100/20 to-transparent"></div>
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-luxury-gold-400/10 rounded-full blur-3xl"></div>
         <div className="absolute top-0 right-1/4 w-24 h-24 bg-luxury-gold-500/10 rounded-full blur-2xl"></div>
 
-        <div className="container mx-auto px-4 py-5 relative z-10">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 py-3 md:py-5 relative z-10">
+          <div className="flex justify-between items-center min-w-0">
             <motion.div
-              className="flex items-center space-x-4"
+              className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-shrink-0"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-luxury-gold-400 via-luxury-gold-500 to-luxury-gold-600 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 group">
-                  <Car className="w-9 h-9 text-black font-bold group-hover:scale-110 transition-transform" />
+              <div className="relative flex-shrink-0">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-luxury-gold-400 via-luxury-gold-500 to-luxury-gold-600 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                  <Car className="w-6 h-6 sm:w-9 sm:h-9 text-black font-bold group-hover:scale-110 transition-transform" />
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </div>
-              <div className="relative">
-                <span className="text-3xl font-bold bg-gradient-to-r from-luxury-dark-900 via-luxury-dark-800 to-luxury-dark-900 bg-clip-text text-transparent tracking-tight">
+              <div className="relative min-w-0 flex-shrink">
+                <span className="text-lg sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-luxury-dark-900 via-luxury-dark-800 to-luxury-dark-900 bg-clip-text text-transparent tracking-tight whitespace-nowrap">
                   LUXURY SUPERCARS
                 </span>
-                <p className="text-sm text-luxury-gold-600 font-semibold tracking-wide">
+                <p className="text-xs sm:text-sm text-luxury-gold-600 font-semibold tracking-wide whitespace-nowrap">
                   Dubai Premium Rental
                 </p>
-                <div className="absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-full"></div>
+                <div className="absolute -bottom-1 left-0 w-16 sm:w-20 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 rounded-full"></div>
               </div>
             </motion.div>
 
@@ -1305,27 +1305,28 @@ const Index = () => {
               </motion.a>
             </nav>
 
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2 bg-luxury-gold-50/50 px-4 py-2 rounded-xl">
+            <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
+              <div className="hidden lg:flex items-center space-x-2 bg-luxury-gold-50/50 px-3 py-2 rounded-xl">
                 <Shield className="w-4 h-4 text-luxury-gold-600" />
-                <span className="text-sm font-semibold text-luxury-dark-700">
+                <span className="text-sm font-semibold text-luxury-dark-700 whitespace-nowrap">
                   Licensed & Insured
                 </span>
               </div>
               <motion.button
-                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-6 py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() =>
                   window.open("https://t.me/luxurysupercarsdubai", "_blank")
                 }
               >
-                <MessageCircle className="w-4 h-4 inline mr-2" />
-                Telegram
+                <MessageCircle className="w-4 h-4 inline mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">Telegram</span>
+                <span className="sm:hidden">TG</span>
               </motion.button>
 
               <button
-                className="lg:hidden text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
+                className="lg:hidden text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors p-2"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
