@@ -408,7 +408,7 @@ const Index = () => {
       description:
         "The AMG GT63 Coupe delivers pure performance in a stunning four-door package.",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F45be1bcd5ad646d48f60f2c71ec4f5b5",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2Febbd52fd05b44c3086bf9a8201acde5d",
       pricePerDay: 2500,
       originalPrice: 2800,
       engine: "4.0L V8 Twin-Turbo",
@@ -831,12 +831,12 @@ const Index = () => {
     {
       id: 28,
       brand: "bmw",
-      name: "BMW M4 Competition",
+      name: "BMW X6 M Competition",
       category: "Performance SUV Coupe",
       description:
         "The X6 M Competition combines SUV practicality with coupe styling and M performance in stunning blue.",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F0297c1aa9bc54804b6ee2dfd1b0bf189",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F14d884ca037948539838f3a36cec5113",
       pricePerDay: 1500,
       originalPrice: 1800,
       engine: "4.4L V8 Twin-Turbo",
