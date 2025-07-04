@@ -1182,7 +1182,7 @@ const Index = () => {
       </div>
 
       {/* Enhanced Main Navigation */}
-      <header className="relative bg-gradient-to-r from-white via-luxury-gold-50/30 to-white backdrop-blur-xl shadow-luxury border-b border-luxury-gold-200/30 sticky top-0 z-50 overflow-x-hidden">
+      <header className="relative bg-gradient-to-r from-white via-luxury-gold-50/30 to-white backdrop-blur-xl shadow-luxury border-b border-luxury-gold-200/30 sticky top-0 z-50 overflow-x-hidden w-full max-w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold-100/20 to-transparent"></div>
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-luxury-gold-400/10 rounded-full blur-3xl"></div>
         <div className="absolute top-0 right-1/4 w-24 h-24 bg-luxury-gold-500/10 rounded-full blur-2xl"></div>
