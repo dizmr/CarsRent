@@ -666,7 +666,7 @@ const Index = () => {
       description:
         "The R8 Spyder combines the thrill of open-top driving with the performance of a true supercar.",
       image:
-        "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F9ba2905c86c743948aa630a425ea6acd",
       pricePerDay: 2000,
       originalPrice: 2300,
       engine: "5.2L V10",
