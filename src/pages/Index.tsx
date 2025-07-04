@@ -1487,9 +1487,9 @@ const Index = () => {
             {/* Stats */}
             <motion.div
               className="flex flex-wrap justify-center gap-8 mb-10"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.2, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-luxury-gold-400 mb-1">
