@@ -1865,15 +1865,15 @@ const Index = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-2">
                     <motion.button
-                      className="flex-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black font-bold py-3 rounded-xl transition-all shadow-lg hover:shadow-xl"
+                      className="flex-1 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 hover:from-luxury-gold-500 hover:to-luxury-gold-700 text-black font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-sm"
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={!car.available}
                       onClick={() =>
                         window.open(
-                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${car.name}`,
+                          `https://t.me/luxurysupercarsdubai?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
                           "_blank",
                         )
                       }
@@ -1881,15 +1881,30 @@ const Index = () => {
                       {car.available ? "Book Now" : "Notify When Available"}
                     </motion.button>
                     <motion.button
-                      className="px-6 py-3 border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-all backdrop-blur-sm flex items-center space-x-2"
+                      className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-sm flex items-center justify-center space-x-1"
+                      whileHover={{ scale: 1.02, y: -1 }}
+                      whileTap={{ scale: 0.98 }}
+                      disabled={!car.available}
+                      onClick={() =>
+                        window.open(
+                          `https://wa.me/971501234567?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
+                          "_blank",
+                        )
+                      }
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>WhatsApp</span>
+                    </motion.button>
+                    <motion.button
+                      className="px-4 py-3 border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-all backdrop-blur-sm flex items-center justify-center"
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         setSelectedCar(car);
                         setShowCarModal(true);
                       }}
+                      title="View Details"
                     >
-                      <span>Details</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </div>
