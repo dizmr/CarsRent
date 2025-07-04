@@ -578,7 +578,7 @@ const Index = () => {
       description:
         "The Bentayga redefines the luxury SUV segment with unparalleled craftsmanship and performance.",
       image:
-        "https://images.pexels.com/photos/4609896/pexels-photo-4609896.jpeg",
+        "https://cdn.builder.io/api/v1/image/assets%2F9bcd5d27c02c48d1a70e87c1ddb83645%2F3811c4a4f02440eabdb24c4bff22e4fd",
       pricePerDay: 2200,
       originalPrice: 2500,
       engine: "4.0L V8 Twin-Turbo",
