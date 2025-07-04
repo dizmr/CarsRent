@@ -1547,22 +1547,6 @@ const Index = () => {
                 <span>Watch Video</span>
               </motion.button>
             </motion.div>
-
-            {/* Price Info */}
-            <motion.div
-              className="mt-8 text-gray-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
-            >
-              <p className="text-sm">
-                Starting from{" "}
-                <span className="text-luxury-gold-400 font-bold text-lg">
-                  AED 1,000
-                </span>{" "}
-                per day
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -1885,19 +1869,19 @@ const Index = () => {
                       {car.available ? "Book Now" : "Notify When Available"}
                     </motion.button>
                     <motion.button
-                      className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-sm flex items-center justify-center space-x-1"
+                      className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-sm flex items-center justify-center space-x-1"
                       whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       disabled={!car.available}
                       onClick={() =>
                         window.open(
-                          `https://wa.me/971501234567?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
+                          `https://t.me/vivawinsupport?text=I'm interested in booking the ${car.name} for AED ${car.pricePerDay}/day`,
                           "_blank",
                         )
                       }
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span>WhatsApp</span>
+                      <span>Telegram</span>
                     </motion.button>
                     <motion.button
                       className="px-4 py-3 border-2 border-luxury-dark-200 hover:border-luxury-gold-500 text-luxury-dark-700 hover:text-luxury-gold-600 rounded-xl transition-all backdrop-blur-sm flex items-center justify-center"
