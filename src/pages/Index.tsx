@@ -1580,7 +1580,7 @@ const Index = () => {
             <h3 className="text-2xl font-bold text-luxury-dark-900 mb-6 text-center">
               Book Your Dream Supercar
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
               <div className="relative">
                 <label className="block text-sm font-semibold text-luxury-dark-700 mb-3">
                   Pickup Location
