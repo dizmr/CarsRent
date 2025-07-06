@@ -103,15 +103,9 @@ const Footer = () => {
                 {footerLinks.products.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -129,15 +123,9 @@ const Footer = () => {
                 {footerLinks.support.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -155,15 +143,9 @@ const Footer = () => {
                 {footerLinks.company.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -236,25 +218,12 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <p>© 2024 Dyson Ltd. All rights reserved.</p>
-              <div className="mt-2 space-x-4">
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Cookies
-                </a>
+              <div className="mt-2 space-x-4 text-dyson-grey-500">
+                <span>Privacy Policy</span>
+                <span>•</span>
+                <span>Terms of Service</span>
+                <span>•</span>
+                <span>Cookies</span>
               </div>
             </motion.div>
           </div>

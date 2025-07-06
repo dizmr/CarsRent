@@ -43,7 +43,6 @@ const Index = () => {
   const [activeCarBrand, setActiveCarBrand] = useState("all");
   const [selectedCar, setSelectedCar] = useState<any>(null);
   const [showCarModal, setShowCarModal] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("EN");
 
   const carBrands = [
     { id: "all", name: "All Brands" },
@@ -1123,40 +1122,6 @@ const Index = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex items-center bg-white/5 rounded-full px-2 py-1">
-                <motion.span
-                  className={`text-xs font-medium transition-colors cursor-pointer px-1 ${
-                    currentLanguage === "AR"
-                      ? "text-luxury-gold-400 font-semibold"
-                      : "text-gray-300 hover:text-luxury-gold-400"
-                  }`}
-                  whileHover={{ scale: 1.02 }}
-                  onClick={() => {
-                    setCurrentLanguage("AR");
-                    document.documentElement.dir = "rtl";
-                    document.documentElement.lang = "ar";
-                  }}
-                >
-                  AR
-                </motion.span>
-                <span className="text-luxury-dark-400 text-xs mx-1">|</span>
-                <motion.span
-                  className={`text-xs font-medium transition-colors cursor-pointer px-1 ${
-                    currentLanguage === "EN"
-                      ? "text-luxury-gold-400 font-semibold"
-                      : "text-gray-300 hover:text-luxury-gold-400"
-                  }`}
-                  whileHover={{ scale: 1.02 }}
-                  onClick={() => {
-                    setCurrentLanguage("EN");
-                    document.documentElement.dir = "ltr";
-                    document.documentElement.lang = "en";
-                  }}
-                >
-                  EN
-                </motion.span>
-              </div>
-
               <div className="flex items-center space-x-2">
                 <motion.div
                   className="p-1.5 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
@@ -1528,15 +1493,6 @@ const Index = () => {
                 <Car className="w-5 h-5 flex-shrink-0" />
                 <span className="whitespace-nowrap">Browse Our Fleet</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </motion.button>
-
-              <motion.button
-                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2 w-full sm:w-auto max-w-xs sm:max-w-none justify-center"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Play className="w-5 h-5 flex-shrink-0" />
-                <span className="whitespace-nowrap">Watch Video</span>
               </motion.button>
             </motion.div>
           </motion.div>
