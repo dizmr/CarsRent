@@ -43,6 +43,10 @@ const Index = () => {
   const [activeCarBrand, setActiveCarBrand] = useState("all");
   const [selectedCar, setSelectedCar] = useState<any>(null);
   const [showCarModal, setShowCarModal] = useState(false);
+<<<<<<< HEAD
+=======
+  const [currentLanguage, setCurrentLanguage] = useState("EN");
+>>>>>>> 3b9ab2d (Initial commit)
 
   const carBrands = [
     { id: "all", name: "All Brands" },
@@ -1098,6 +1102,7 @@ const Index = () => {
                 whileHover={{ scale: 1.02, y: -1 }}
               >
                 <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+<<<<<<< HEAD
                   <Phone className="w-3 h-3 text-luxury-gold-400" />
                 </div>
                 <span className="font-medium group-hover:text-luxury-gold-400 transition-colors">
@@ -1110,6 +1115,8 @@ const Index = () => {
                 whileHover={{ scale: 1.02, y: -1 }}
               >
                 <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
+=======
+>>>>>>> 3b9ab2d (Initial commit)
                   <Mail className="w-3 h-3 text-luxury-gold-400" />
                 </div>
                 <span className="hidden sm:inline font-medium group-hover:text-luxury-gold-400 transition-colors">
@@ -1136,15 +1143,43 @@ const Index = () => {
             <div className="flex items-center gap-3">
               <div className="flex items-center bg-white/5 rounded-full px-2 py-1">
                 <motion.span
+<<<<<<< HEAD
                   className="text-xs font-medium hover:text-luxury-gold-400 transition-colors cursor-pointer px-1"
                   whileHover={{ scale: 1.02 }}
+=======
+                  className={`text-xs font-medium transition-colors cursor-pointer px-1 ${
+                    currentLanguage === "AR"
+                      ? "text-luxury-gold-400 font-semibold"
+                      : "text-gray-300 hover:text-luxury-gold-400"
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                  onClick={() => {
+                    setCurrentLanguage("AR");
+                    document.documentElement.dir = "rtl";
+                    document.documentElement.lang = "ar";
+                  }}
+>>>>>>> 3b9ab2d (Initial commit)
                 >
                   AR
                 </motion.span>
                 <span className="text-luxury-dark-400 text-xs mx-1">|</span>
                 <motion.span
+<<<<<<< HEAD
                   className="text-luxury-gold-400 font-semibold text-xs px-1"
                   whileHover={{ scale: 1.02 }}
+=======
+                  className={`text-xs font-medium transition-colors cursor-pointer px-1 ${
+                    currentLanguage === "EN"
+                      ? "text-luxury-gold-400 font-semibold"
+                      : "text-gray-300 hover:text-luxury-gold-400"
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                  onClick={() => {
+                    setCurrentLanguage("EN");
+                    document.documentElement.dir = "ltr";
+                    document.documentElement.lang = "en";
+                  }}
+>>>>>>> 3b9ab2d (Initial commit)
                 >
                   EN
                 </motion.span>
@@ -1152,6 +1187,7 @@ const Index = () => {
 
               <div className="flex items-center space-x-2">
                 <motion.div
+<<<<<<< HEAD
                   className="p-1.5 bg-white/10 hover:bg-blue-500/20 rounded-full transition-all duration-300 cursor-pointer group"
                   whileHover={{ scale: 1.05, y: -1 }}
                 >
@@ -1174,6 +1210,15 @@ const Index = () => {
                   whileHover={{ scale: 1.05, y: -1 }}
                 >
                   <Youtube className="w-3 h-3 text-gray-300 group-hover:text-red-400 transition-colors" />
+=======
+                  className="p-1.5 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -1 }}
+                  onClick={() =>
+                    window.open("https://t.me/vivawinsupport", "_blank")
+                  }
+                >
+                  <MessageCircle className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
+>>>>>>> 3b9ab2d (Initial commit)
                 </motion.div>
               </div>
             </div>
@@ -1440,7 +1485,11 @@ const Index = () => {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0.3, y: 20 }}
+=======
+            initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="max-w-5xl mx-auto pb-8"
@@ -1459,7 +1508,11 @@ const Index = () => {
             {/* Main Headline */}
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+<<<<<<< HEAD
               initial={{ opacity: 0.2, y: 15 }}
+=======
+              initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
@@ -1475,7 +1528,11 @@ const Index = () => {
             {/* Subtitle */}
             <motion.p
               className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
+<<<<<<< HEAD
               initial={{ opacity: 0.2, y: 15 }}
+=======
+              initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
@@ -1487,7 +1544,11 @@ const Index = () => {
             {/* Stats */}
             <motion.div
               className="flex flex-wrap justify-center gap-8 mb-10"
+<<<<<<< HEAD
               initial={{ opacity: 0.2, y: 15 }}
+=======
+              initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
@@ -1520,7 +1581,11 @@ const Index = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4 mb-8"
+<<<<<<< HEAD
               initial={{ opacity: 0.2, y: 15 }}
+=======
+              initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
@@ -1723,7 +1788,11 @@ const Index = () => {
               <motion.div
                 key={car.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden border border-luxury-dark-100 transition-all duration-500"
+<<<<<<< HEAD
                 initial={{ opacity: 0.3, y: 20 }}
+=======
+                initial={{ opacity: 1, y: 0 }}
+>>>>>>> 3b9ab2d (Initial commit)
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
@@ -2396,8 +2465,13 @@ const Index = () => {
               <h3 className="text-lg font-bold mb-6">Contact Info</h3>
               <div className="space-y-4 text-luxury-dark-400">
                 <div className="flex items-center space-x-3">
+<<<<<<< HEAD
                   <Phone className="w-5 h-5 text-luxury-gold-400" />
                   <span>+971 50 123 4567</span>
+=======
+                  <MessageCircle className="w-5 h-5 text-luxury-gold-400" />
+                  <span>@vivawinsupport</span>
+>>>>>>> 3b9ab2d (Initial commit)
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-luxury-gold-400" />

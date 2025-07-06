@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import {
   Facebook,
   Twitter,
@@ -8,6 +9,9 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+=======
+import { MessageCircle, Mail, MapPin } from "lucide-react";
+>>>>>>> 3b9ab2d (Initial commit)
 
 const Footer = () => {
   const footerLinks = {
@@ -38,6 +42,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
+<<<<<<< HEAD
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
@@ -48,6 +53,18 @@ const Footer = () => {
     { icon: Phone, text: "1-866-693-9766", label: "Phone" },
     { icon: Mail, text: "support@dyson.com", label: "Email" },
     { icon: MapPin, text: "Malmesbury, Wiltshire, UK", label: "Address" },
+=======
+    {
+      icon: MessageCircle,
+      href: "https://t.me/vivawinsupport",
+      label: "Telegram",
+    },
+  ];
+
+  const contactInfo = [
+    { icon: Mail, text: "info@luxurysupercarsdubai.com", label: "Email" },
+    { icon: MapPin, text: "Dubai Marina, UAE", label: "Address" },
+>>>>>>> 3b9ab2d (Initial commit)
   ];
 
   return (
