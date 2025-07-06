@@ -1432,7 +1432,7 @@ const Index = () => {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0.3, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="max-w-5xl mx-auto pb-8"
@@ -1451,7 +1451,7 @@ const Index = () => {
             {/* Main Headline */}
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
@@ -1467,7 +1467,7 @@ const Index = () => {
             {/* Subtitle */}
             <motion.p
               className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
@@ -1479,7 +1479,7 @@ const Index = () => {
             {/* Stats */}
             <motion.div
               className="flex flex-wrap justify-center gap-8 mb-10"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
@@ -1512,7 +1512,7 @@ const Index = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4 mb-8"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
