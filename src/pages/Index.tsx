@@ -2249,46 +2249,11 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-bold mb-6">Quick Links</h3>
               <ul className="space-y-3 text-luxury-dark-400">
-                <li>
-                  <a
-                    href="#home"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#fleet"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Our Fleet
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
+                <li>Home</li>
+                <li>Our Fleet</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact</li>
               </ul>
             </div>
 
@@ -2296,46 +2261,11 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-bold mb-6">Car Categories</h3>
               <ul className="space-y-3 text-luxury-dark-400">
-                <li>
-                  <a
-                    href="#sports"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Sports Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#luxury"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Luxury Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#convertible"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Convertibles
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#electric"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Electric Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#suv"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Luxury SUVs
-                  </a>
-                </li>
+                <li>Sports Cars</li>
+                <li>Luxury Cars</li>
+                <li>Convertibles</li>
+                <li>Electric Cars</li>
+                <li>Luxury SUVs</li>
               </ul>
             </div>
 
@@ -2368,30 +2298,13 @@ const Index = () => {
               © 2024 Luxury Supercars Dubai. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-luxury-dark-400">
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Cookie Policy
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                FAQ
-              </a>
+              <span>Privacy Policy</span>
+              <span>•</span>
+              <span>Terms of Service</span>
+              <span>•</span>
+              <span>Cookie Policy</span>
+              <span>•</span>
+              <span>FAQ</span>
             </div>
           </div>
         </div>
