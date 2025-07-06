@@ -15,10 +15,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Cars", href: "#cars" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home" },
+    { name: "Cars" },
+    { name: "About" },
+    { name: "Contact" },
   ];
 
   return (
@@ -51,15 +51,12 @@ const Navigation = () => {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
+              <span
                 key={item.name}
-                href={item.href}
-                className="text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors duration-200 font-medium"
-                whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="text-luxury-dark-700 font-medium"
               >
                 {item.name}
-              </motion.a>
+              </span>
             ))}
           </div>
 
