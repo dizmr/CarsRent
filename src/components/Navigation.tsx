@@ -73,9 +73,12 @@ const Navigation = () => {
               className="bg-luxury-gold-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold-700 transition-colors duration-200 flex items-center space-x-2"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open("https://t.me/vivawinsupport", "_blank")
+              }
             >
-              <Phone className="w-4 h-4" />
-              <span>+1 (555) 123-4567</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>Telegram</span>
             </motion.button>
           </div>
 
