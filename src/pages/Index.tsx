@@ -1305,36 +1305,11 @@ const Index = () => {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <a
-                href="#home"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#fleet"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Our Fleet
-              </a>
-              <a
-                href="#services"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="#about"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                About Us
-              </a>
-              <a
-                href="#contact"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Contact
-              </a>
+              <span className="block text-luxury-dark-700">Home</span>
+              <span className="block text-luxury-dark-700">Our Fleet</span>
+              <span className="block text-luxury-dark-700">Services</span>
+              <span className="block text-luxury-dark-700">About Us</span>
+              <span className="block text-luxury-dark-700">Contact</span>
             </div>
           </motion.div>
         )}
