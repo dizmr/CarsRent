@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
