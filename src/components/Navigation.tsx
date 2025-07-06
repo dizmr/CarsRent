@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Crown, Shield, Phone } from "lucide-react";
+import { Crown, Shield, MessageCircle } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,10 +15,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Cars", href: "#cars" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home" },
+    { name: "Cars" },
+    { name: "About" },
+    { name: "Contact" },
   ];
 
   return (
@@ -51,15 +51,12 @@ const Navigation = () => {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
+              <span
                 key={item.name}
-                href={item.href}
-                className="text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors duration-200 font-medium"
-                whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="text-luxury-dark-700 font-medium"
               >
                 {item.name}
-              </motion.a>
+              </span>
             ))}
           </div>
 
@@ -73,9 +70,12 @@ const Navigation = () => {
               className="bg-luxury-gold-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-luxury-gold-700 transition-colors duration-200 flex items-center space-x-2"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open("https://t.me/vivawinsupport", "_blank")
+              }
             >
-              <Phone className="w-4 h-4" />
-              <span>+1 (555) 123-4567</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>Telegram</span>
             </motion.button>
           </div>
 

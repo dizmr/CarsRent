@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -38,16 +30,16 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    {
+      icon: MessageCircle,
+      href: "https://t.me/vivawinsupport",
+      label: "Telegram",
+    },
   ];
 
   const contactInfo = [
-    { icon: Phone, text: "1-866-693-9766", label: "Phone" },
-    { icon: Mail, text: "support@dyson.com", label: "Email" },
-    { icon: MapPin, text: "Malmesbury, Wiltshire, UK", label: "Address" },
+    { icon: Mail, text: "info@luxurysupercarsdubai.com", label: "Email" },
+    { icon: MapPin, text: "Dubai Marina, UAE", label: "Address" },
   ];
 
   return (
@@ -111,15 +103,9 @@ const Footer = () => {
                 {footerLinks.products.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -137,15 +123,9 @@ const Footer = () => {
                 {footerLinks.support.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -163,15 +143,9 @@ const Footer = () => {
                 {footerLinks.company.map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-dyson-grey-400 text-sm"
                   >
-                    <a
-                      href="#"
-                      className="text-dyson-grey-400 hover:text-dyson-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link}
                   </motion.li>
                 ))}
               </ul>
@@ -244,25 +218,12 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <p>© 2024 Dyson Ltd. All rights reserved.</p>
-              <div className="mt-2 space-x-4">
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-dyson-purple-400 transition-colors duration-200"
-                >
-                  Cookies
-                </a>
+              <div className="mt-2 space-x-4 text-dyson-grey-500">
+                <span>Privacy Policy</span>
+                <span>•</span>
+                <span>Terms of Service</span>
+                <span>•</span>
+                <span>Cookies</span>
               </div>
             </motion.div>
           </div>

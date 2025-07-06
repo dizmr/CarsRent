@@ -1098,18 +1098,6 @@ const Index = () => {
                 whileHover={{ scale: 1.02, y: -1 }}
               >
                 <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
-                  <Phone className="w-3 h-3 text-luxury-gold-400" />
-                </div>
-                <span className="font-medium group-hover:text-luxury-gold-400 transition-colors">
-                  +971 50 123 4567
-                </span>
-              </motion.div>
-
-              <motion.div
-                className="group flex items-center space-x-1 bg-white/5 hover:bg-white/10 px-2 py-1 rounded-full transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.02, y: -1 }}
-              >
-                <div className="p-1 bg-luxury-gold-500/20 rounded-full group-hover:bg-luxury-gold-500/30 transition-colors">
                   <Mail className="w-3 h-3 text-luxury-gold-400" />
                 </div>
                 <span className="hidden sm:inline font-medium group-hover:text-luxury-gold-400 transition-colors">
@@ -1134,46 +1122,15 @@ const Index = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex items-center bg-white/5 rounded-full px-2 py-1">
-                <motion.span
-                  className="text-xs font-medium hover:text-luxury-gold-400 transition-colors cursor-pointer px-1"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  AR
-                </motion.span>
-                <span className="text-luxury-dark-400 text-xs mx-1">|</span>
-                <motion.span
-                  className="text-luxury-gold-400 font-semibold text-xs px-1"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  EN
-                </motion.span>
-              </div>
-
               <div className="flex items-center space-x-2">
-                <motion.div
-                  className="p-1.5 bg-white/10 hover:bg-blue-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.05, y: -1 }}
-                >
-                  <Facebook className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
-                </motion.div>
-                <motion.div
-                  className="p-1.5 bg-white/10 hover:bg-pink-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.05, y: -1 }}
-                >
-                  <Instagram className="w-3 h-3 text-gray-300 group-hover:text-pink-400 transition-colors" />
-                </motion.div>
                 <motion.div
                   className="p-1.5 bg-white/10 hover:bg-blue-400/20 rounded-full transition-all duration-300 cursor-pointer group"
                   whileHover={{ scale: 1.05, y: -1 }}
+                  onClick={() =>
+                    window.open("https://t.me/vivawinsupport", "_blank")
+                  }
                 >
-                  <Twitter className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
-                </motion.div>
-                <motion.div
-                  className="p-1.5 bg-white/10 hover:bg-red-500/20 rounded-full transition-all duration-300 cursor-pointer group"
-                  whileHover={{ scale: 1.05, y: -1 }}
-                >
-                  <Youtube className="w-3 h-3 text-gray-300 group-hover:text-red-400 transition-colors" />
+                  <MessageCircle className="w-3 h-3 text-gray-300 group-hover:text-blue-400 transition-colors" />
                 </motion.div>
               </div>
             </div>
@@ -1211,98 +1168,22 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 overflow-visible flex-shrink min-w-0">
-              <motion.a
-                href="#home"
-                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">Home</span>
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </motion.a>
-              <motion.a
-                href="#fleet"
-                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">Our Fleet</span>
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </motion.a>
-
-              <div className="relative group">
-                <motion.button
-                  className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 flex items-center space-x-1"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span>Car Types</span>
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                  <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                </motion.button>
-                <div className="absolute top-full left-0 mt-3 w-56 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-luxury-gold-200/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
-                  <div className="py-3">
-                    <a
-                      href="#sports"
-                      className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors"
-                    >
-                      Sports Cars
-                    </a>
-                    <a
-                      href="#luxury"
-                      className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors"
-                    >
-                      Luxury Cars
-                    </a>
-                    <a
-                      href="#convertible"
-                      className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors"
-                    >
-                      Convertibles
-                    </a>
-                    <a
-                      href="#electric"
-                      className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors"
-                    >
-                      Electric Cars
-                    </a>
-                    <a
-                      href="#suv"
-                      className="block px-6 py-3 text-sm hover:bg-luxury-gold-50 hover:text-luxury-gold-600 transition-colors"
-                    >
-                      Luxury SUVs
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <motion.a
-                href="#services"
-                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">Services</span>
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </motion.a>
-              <motion.a
-                href="#about"
-                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">About Us</span>
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="relative px-4 py-2 text-luxury-dark-700 hover:text-luxury-gold-600 font-semibold transition-all duration-300 rounded-xl hover:bg-luxury-gold-50/50 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">Contact</span>
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-luxury-gold-400 to-luxury-gold-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-              </motion.a>
+            <nav className="hidden lg:flex items-center space-x-4 flex-shrink min-w-0">
+              <span className="px-4 py-2 text-luxury-dark-700 font-semibold">
+                Home
+              </span>
+              <span className="px-4 py-2 text-luxury-dark-700 font-semibold">
+                Our Fleet
+              </span>
+              <span className="px-4 py-2 text-luxury-dark-700 font-semibold">
+                Services
+              </span>
+              <span className="px-4 py-2 text-luxury-dark-700 font-semibold">
+                About Us
+              </span>
+              <span className="px-4 py-2 text-luxury-dark-700 font-semibold">
+                Contact
+              </span>
             </nav>
 
             <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 min-w-0">
@@ -1348,36 +1229,11 @@ const Index = () => {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <a
-                href="#home"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#fleet"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Our Fleet
-              </a>
-              <a
-                href="#services"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="#about"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                About Us
-              </a>
-              <a
-                href="#contact"
-                className="block text-luxury-dark-700 hover:text-luxury-gold-600 transition-colors"
-              >
-                Contact
-              </a>
+              <span className="block text-luxury-dark-700">Home</span>
+              <span className="block text-luxury-dark-700">Our Fleet</span>
+              <span className="block text-luxury-dark-700">Services</span>
+              <span className="block text-luxury-dark-700">About Us</span>
+              <span className="block text-luxury-dark-700">Contact</span>
             </div>
           </motion.div>
         )}
@@ -1440,7 +1296,7 @@ const Index = () => {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0.3, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             className="max-w-5xl mx-auto pb-8"
@@ -1459,7 +1315,7 @@ const Index = () => {
             {/* Main Headline */}
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
@@ -1475,7 +1331,7 @@ const Index = () => {
             {/* Subtitle */}
             <motion.p
               className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
@@ -1487,7 +1343,7 @@ const Index = () => {
             {/* Stats */}
             <motion.div
               className="flex flex-wrap justify-center gap-8 mb-10"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
@@ -1520,7 +1376,7 @@ const Index = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4 mb-8"
-              initial={{ opacity: 0.2, y: 15 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
@@ -1536,15 +1392,6 @@ const Index = () => {
                 <Car className="w-5 h-5 flex-shrink-0" />
                 <span className="whitespace-nowrap">Browse Our Fleet</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </motion.button>
-
-              <motion.button
-                className="group border-2 border-white/30 hover:border-luxury-gold-400 text-white hover:text-luxury-gold-400 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-bold transition-all backdrop-blur-sm flex items-center space-x-2 w-full sm:w-auto max-w-xs sm:max-w-none justify-center"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Play className="w-5 h-5 flex-shrink-0" />
-                <span className="whitespace-nowrap">Watch Video</span>
               </motion.button>
             </motion.div>
           </motion.div>
@@ -1723,7 +1570,7 @@ const Index = () => {
               <motion.div
                 key={car.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden border border-luxury-dark-100 transition-all duration-500"
-                initial={{ opacity: 0.3, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
@@ -2301,46 +2148,11 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-bold mb-6">Quick Links</h3>
               <ul className="space-y-3 text-luxury-dark-400">
-                <li>
-                  <a
-                    href="#home"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#fleet"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Our Fleet
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
+                <li>Home</li>
+                <li>Our Fleet</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact</li>
               </ul>
             </div>
 
@@ -2348,46 +2160,11 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-bold mb-6">Car Categories</h3>
               <ul className="space-y-3 text-luxury-dark-400">
-                <li>
-                  <a
-                    href="#sports"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Sports Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#luxury"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Luxury Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#convertible"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Convertibles
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#electric"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Electric Cars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#suv"
-                    className="hover:text-luxury-gold-400 transition-colors"
-                  >
-                    Luxury SUVs
-                  </a>
-                </li>
+                <li>Sports Cars</li>
+                <li>Luxury Cars</li>
+                <li>Convertibles</li>
+                <li>Electric Cars</li>
+                <li>Luxury SUVs</li>
               </ul>
             </div>
 
@@ -2396,8 +2173,8 @@ const Index = () => {
               <h3 className="text-lg font-bold mb-6">Contact Info</h3>
               <div className="space-y-4 text-luxury-dark-400">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-luxury-gold-400" />
-                  <span>+971 50 123 4567</span>
+                  <MessageCircle className="w-5 h-5 text-luxury-gold-400" />
+                  <span>@vivawinsupport</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-luxury-gold-400" />
@@ -2420,30 +2197,13 @@ const Index = () => {
               © 2024 Luxury Supercars Dubai. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-luxury-dark-400">
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                Cookie Policy
-              </a>
-              <a
-                href="#"
-                className="hover:text-luxury-gold-400 transition-colors"
-              >
-                FAQ
-              </a>
+              <span>Privacy Policy</span>
+              <span>•</span>
+              <span>Terms of Service</span>
+              <span>•</span>
+              <span>Cookie Policy</span>
+              <span>•</span>
+              <span>FAQ</span>
             </div>
           </div>
         </div>
