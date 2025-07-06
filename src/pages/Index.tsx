@@ -2388,8 +2388,8 @@ const Index = () => {
               <h3 className="text-lg font-bold mb-6">Contact Info</h3>
               <div className="space-y-4 text-luxury-dark-400">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-luxury-gold-400" />
-                  <span>+971 50 123 4567</span>
+                  <MessageCircle className="w-5 h-5 text-luxury-gold-400" />
+                  <span>@vivawinsupport</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-luxury-gold-400" />
