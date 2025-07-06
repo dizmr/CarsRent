@@ -38,16 +38,16 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    {
+      icon: MessageCircle,
+      href: "https://t.me/vivawinsupport",
+      label: "Telegram",
+    },
   ];
 
   const contactInfo = [
-    { icon: Phone, text: "1-866-693-9766", label: "Phone" },
-    { icon: Mail, text: "support@dyson.com", label: "Email" },
-    { icon: MapPin, text: "Malmesbury, Wiltshire, UK", label: "Address" },
+    { icon: Mail, text: "info@luxurysupercarsdubai.com", label: "Email" },
+    { icon: MapPin, text: "Dubai Marina, UAE", label: "Address" },
   ];
 
   return (
