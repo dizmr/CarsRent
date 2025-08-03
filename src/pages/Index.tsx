@@ -29,11 +29,33 @@ import {
   Quote,
 } from "lucide-react";
 
+interface Car {
+  id: number;
+  brand: string;
+  name: string;
+  category: string;
+  description: string;
+  image: string;
+  pricePerDay: number;
+  originalPrice?: number;
+  engine: string;
+  power: string;
+  acceleration: string;
+  maxSpeed: string;
+  transmission: string;
+  seats: number;
+  doors: number;
+  features: string[];
+  available: boolean;
+  featured: boolean;
+  rating: number;
+}
+
 const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState("Dubai Marina");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeCarBrand, setActiveCarBrand] = useState("all");
-  const [selectedCar, setSelectedCar] = useState<any>(null);
+  const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showCarModal, setShowCarModal] = useState(false);
 
   const carBrands = [
