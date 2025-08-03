@@ -45,12 +45,12 @@ const Footer = () => {
   return (
     <footer
       id="support"
-      className="bg-dyson-grey-900 text-white relative overflow-hidden"
+      className="bg-gray-900 text-white relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-dyson-purple-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 h-48 bg-dyson-purple-400 rounded-full blur-2xl"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-luxury-gold-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-luxury-gold-400 rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
