@@ -5,6 +5,7 @@ import {
   MessageCircle,
   Calendar,
   MapPin,
+  Search,
   Users,
   Settings,
   Car,
@@ -25,6 +26,7 @@ import {
   Fuel,
   Navigation,
   ChevronDown,
+  Quote,
 } from "lucide-react";
 
 const Index = () => {
