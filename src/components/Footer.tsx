@@ -1,40 +1,40 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import {
+  MessageCircle,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
     products: [
-      "Cordless Vacuums",
-      "Corded Vacuums",
-      "Air Purifiers",
-      "Hair Care",
-      "Lighting",
-      "Hand Dryers",
+      "Sports Cars",
+      "Luxury Vehicles",
+      "Convertibles",
+      "Electric Cars",
+      "SUVs",
+      "Supercars",
     ],
     support: [
       "Help Center",
-      "User Manuals",
-      "Warranty",
-      "Parts & Accessories",
-      "Repair Services",
+      "Booking Support",
+      "Insurance",
+      "Delivery Service",
+      "Maintenance",
       "Contact Support",
     ],
     company: [
-      "About Dyson",
+      "About Us",
       "Careers",
-      "Dyson Institute",
-      "Research",
-      "Newsroom",
+      "Fleet Management",
+      "Partnerships",
+      "Press",
       "Investor Relations",
     ],
   };
 
   const socialLinks = [
-    {
-      icon: MessageCircle,
-      href: "https://t.me/vivawinsupport",
-      label: "Telegram",
-    },
+    { icon: MessageCircle, href: "https://t.me/vivawinsupport", label: "Telegram" },
   ];
 
   const contactInfo = [
@@ -65,12 +65,12 @@ const Footer = () => {
               viewport={{ once: true }}
               className="lg:col-span-1"
             >
-              <h3 className="text-3xl font-bold mb-4 text-dyson-purple-400">
-                DYSON
+              <h3 className="text-3xl font-bold mb-4 text-luxury-gold-400">
+                LUXURY CARS
               </h3>
-              <p className="text-dyson-grey-300 mb-6 leading-relaxed">
-                Engineering the future with breakthrough technology that solves
-                real problems.
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Dubai's premier luxury supercar rental service offering
+                exceptional experiences and world-class vehicles.
               </p>
 
               {/* Contact Info */}
@@ -217,7 +217,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <p>© 2024 Dyson Ltd. All rights reserved.</p>
+              <p>© 2024 Luxury Supercars Dubai. All rights reserved.</p>
               <div className="mt-2 space-x-4 text-dyson-grey-500">
                 <span>Privacy Policy</span>
                 <span>•</span>
