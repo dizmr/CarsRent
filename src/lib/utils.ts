@@ -12,7 +12,7 @@ export function cn(...inputs: ClassValue[]) {
 /**
  * Проверяет, является ли значение пустой строкой или null/undefined
  */
-export function isEmpty(value: any): boolean {
+export function isEmpty(value: unknown): boolean {
   return value === null || value === undefined || value === "";
 }
 
