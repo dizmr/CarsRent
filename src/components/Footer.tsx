@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  MessageCircle,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -34,7 +30,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: MessageCircle, href: "https://t.me/vivawinsupport", label: "Telegram" },
+    {
+      icon: MessageCircle,
+      href: "https://t.me/vivawinsupport",
+      label: "Telegram",
+    },
   ];
 
   const contactInfo = [
