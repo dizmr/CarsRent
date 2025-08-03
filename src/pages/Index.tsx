@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  Phone,
   Mail,
   MessageCircle,
-  User,
   Calendar,
   MapPin,
-  Search,
   Users,
   Settings,
   Car,
@@ -19,14 +16,8 @@ import {
   CheckCircle,
   ThumbsUp,
   Globe,
-  Headphones,
-  CreditCard,
   Zap,
   ArrowRight,
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
   Play,
   Menu,
   X,
@@ -34,7 +25,6 @@ import {
   Fuel,
   Navigation,
   ChevronDown,
-  Quote,
 } from "lucide-react";
 
 const Index = () => {
