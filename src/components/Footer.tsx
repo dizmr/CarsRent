@@ -155,7 +155,7 @@ const Footer = () => {
 
         {/* Newsletter Section */}
         <motion.div
-          className="border-t border-dyson-grey-800 py-12"
+          className="border-t border-gray-800 py-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -163,18 +163,18 @@ const Footer = () => {
         >
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-            <p className="text-dyson-grey-400 mb-6">
-              Get the latest news about our innovations and product launches.
+            <p className="text-gray-400 mb-6">
+              Get the latest news about our fleet and exclusive offers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-dyson-grey-800 border border-dyson-grey-700 rounded-full px-6 py-3 text-white placeholder-dyson-grey-500 focus:outline-none focus:border-dyson-purple-500 transition-colors duration-200"
+                className="flex-1 bg-gray-800 border border-gray-700 rounded-full px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-luxury-gold-500 transition-colors duration-200"
               />
               <motion.button
-                className="bg-dyson-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-dyson-purple-700 transition-colors duration-200"
+                className="bg-luxury-gold-600 text-black px-8 py-3 rounded-full font-semibold hover:bg-luxury-gold-700 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -185,7 +185,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-dyson-grey-800 py-8">
+        <div className="border-t border-gray-800 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Social Links */}
             <motion.div
@@ -199,7 +199,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-dyson-grey-800 rounded-full flex items-center justify-center text-dyson-grey-400 hover:text-dyson-purple-400 hover:bg-dyson-grey-700 transition-all duration-200"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-luxury-gold-400 hover:bg-gray-700 transition-all duration-200"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label={social.label}
@@ -211,14 +211,14 @@ const Footer = () => {
 
             {/* Copyright */}
             <motion.div
-              className="text-dyson-grey-500 text-sm text-center md:text-right"
+              className="text-gray-500 text-sm text-center md:text-right"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <p>© 2024 Luxury Supercars Dubai. All rights reserved.</p>
-              <div className="mt-2 space-x-4 text-dyson-grey-500">
+              <div className="mt-2 space-x-4 text-gray-500">
                 <span>Privacy Policy</span>
                 <span>•</span>
                 <span>Terms of Service</span>
